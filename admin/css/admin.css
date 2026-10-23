@@ -54,4 +54,19 @@ body{background:var(--admin-page);color:var(--admin-text)}
 :root[data-theme="oscuro"] .login-brand img{box-shadow:0 5px 18px #0008}
 :root[data-theme="oscuro"] .login-brand-panel .brand-message h1 em{color:var(--admin-yellow)}
 :root[data-theme="oscuro"] .login-content #login-message{color:#ff9a90}
+:root[data-theme="oscuro"] .fields label{color:#f0e9e3}
+:root[data-theme="oscuro"] .fields .note,:root[data-theme="oscuro"] .panel-head p,:root[data-theme="oscuro"] .item summary span,:root[data-theme="oscuro"] aside>p:not(.eyebrow){color:#c7bbb2}
+:root[data-theme="oscuro"] .tabs{border-color:#45413d}
+:root[data-theme="oscuro"] .tab{background:transparent;color:#d8cec6}
+:root[data-theme="oscuro"] .tab:hover,:root[data-theme="oscuro"] .tab:focus-visible{background:#34302d;color:#fff}
+:root[data-theme="oscuro"] .tab.active{background:#ed3d32;color:#fff}
+:root[data-theme="oscuro"] .admin-main aside button,:root[data-theme="oscuro"] #preview,:root[data-theme="oscuro"] .fields>button,:root[data-theme="oscuro"] .admin-header-actions #export{background:#ed3d32;color:#fff}
+:root[data-theme="oscuro"] .upload{background:#ed3d32;color:#fff}
+:root[data-theme="oscuro"] .delete{background:#202020;color:#ffaaa6;border-color:#75403d}
+:root[data-theme="oscuro"] .fields input[type="color"]{min-height:42px;padding:4px}
+:root[data-theme="oscuro"] button:focus-visible,:root[data-theme="oscuro"] .upload:focus-within{outline:3px solid #edf000;outline-offset:2px}
+:root[data-theme="oscuro"] .login-form>label{color:#f6f4ed}
+:root[data-theme="oscuro"] .login-content>.eyebrow{color:#edf000}
+:root[data-theme="oscuro"] .login-theme-toggle{background:#302f2b;border-color:#777264;color:#edf000;box-shadow:0 0 0 1px #edf00024}
+:root[data-theme="oscuro"] .login-theme-toggle:hover,:root[data-theme="oscuro"] .login-theme-toggle:focus-visible{background:#454237;color:#fff;outline:2px solid #edf000;outline-offset:2px}
 @media(max-width:760px){.login-screen{padding:14px}.login-card{grid-template-columns:1fr;min-height:0;border-radius:13px}.login-brand-panel{min-height:245px;padding:24px 25px}.login-brand img{width:43px;height:43px}.login-brand strong{font-size:1.05rem}.brand-message{margin-top:30px}.brand-message h1{font-size:2.35rem;margin:10px 0}.brand-message p,.brand-signoff{display:none}.login-content{padding:24px 25px 30px}.login-topline{margin-bottom:28px}.login-content h2{font-size:2rem}.login-intro{margin-bottom:21px}.admin-header-actions{gap:5px}.admin-header-actions button{padding:8px;font-size:10px}header{gap:9px;padding:0 12px}header>a{font-size:11px}.admin-main{display:block;padding:26px 16px}aside{position:static;margin-bottom:30px}}

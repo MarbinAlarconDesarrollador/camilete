@@ -18,6 +18,11 @@ html[data-theme="oscuro"] .text-input{background:#202020;border-color:var(--bord
 html[data-theme="oscuro"] .icon-button,html[data-theme="oscuro"] .menu-toggle{color:var(--texto,#f6f4ed)}
 html[data-theme="oscuro"] .menu-toggle:hover,html[data-theme="oscuro"] .icon-button:hover{background:#343434}
 html[data-theme="oscuro"] .button-light{background:var(--secundario,#edf000);color:#171717}
+
+/* Keep the primary navigation action distinct on the light background. */
+html[data-theme="claro"] .site-header .header-cta{background:var(--primario,#c72e38);color:#fff;box-shadow:0 3px 10px #6c192022}
+html[data-theme="claro"] .site-header .header-cta:hover{background:var(--botonHover,#a91f2a);color:#fff}
+html[data-theme="claro"] .site-header .header-cta:focus-visible{outline:3px solid var(--primario,#c72e38);outline-offset:3px}
 .add-to-cart{min-height:42px;white-space:nowrap}
 .cart-float{min-height:50px}
 @media(max-width:650px){.add-to-cart{font-size:.8rem;padding:10px 12px;white-space:normal}}
