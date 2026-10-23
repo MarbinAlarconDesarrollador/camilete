@@ -276,25 +276,59 @@
       });
       const mt = document.querySelector(".menu-toggle");
       const primaryNav = document.querySelector("#primary-navigation");
-      const setMenuOpen = (open) => {
+      mt.innerHTML = '<span class="burger-icon" aria-hidden="true"><i class="burger-layer burger-bun-top"></i><i class="burger-layer burger-lettuce"></i><i class="burger-layer burger-cheese"></i><i class="burger-layer burger-patty"></i><i class="burger-layer burger-bun-bottom"></i></span>';
+      const navOverlay = document.createElement("button");
+      navOverlay.className = "mobile-nav-overlay";
+      navOverlay.type = "button";
+      navOverlay.tabIndex = -1;
+      navOverlay.setAttribute("aria-label", "Cerrar menú");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.querySelector(".site-header").after(navOverlay);
+      const mobileMenu = window.matchMedia("(max-width: 650px)");
+      let menuOpen = false;
+      let menuScrollY = 0;
+      const previousBodyStyle = {};
+      const setMenuOpen = (open, restoreFocus = true) => {
+        if (open === menuOpen || (open && !mobileMenu.matches)) return;
+        menuOpen = open;
         mt.setAttribute("aria-expanded", String(open));
         mt.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
         primaryNav.classList.toggle("nav-open", open);
+        navOverlay.classList.toggle("is-visible", open);
+        navOverlay.setAttribute("aria-hidden", String(!open));
+        document.documentElement.classList.toggle("menu-open", open);
+        if (open) {
+          menuScrollY = window.scrollY;
+          for (const property of ["position", "top", "left", "right", "width"]) previousBodyStyle[property] = document.body.style[property];
+          Object.assign(document.body.style, { position: "fixed", top: `-${menuScrollY}px`, left: "0", right: "0", width: "100%" });
+          primaryNav.inert = false;
+          primaryNav.setAttribute("aria-hidden", "false");
+          requestAnimationFrame(() => primaryNav.querySelector("a")?.focus({ preventScroll: true }));
+        } else {
+          for (const property of ["position", "top", "left", "right", "width"]) document.body.style[property] = previousBodyStyle[property] || "";
+          window.scrollTo(0, menuScrollY);
+          if (restoreFocus && mobileMenu.matches) mt.focus({ preventScroll: true });
+        }
       };
+      primaryNav.inert = mobileMenu.matches;
+      primaryNav.setAttribute("aria-hidden", String(mobileMenu.matches));
       mt.addEventListener("click", () => {
         setMenuOpen(mt.getAttribute("aria-expanded") !== "true");
       });
+      navOverlay.addEventListener("click", () => setMenuOpen(false));
       primaryNav.querySelectorAll("a").forEach((link) =>
         link.addEventListener("click", () => setMenuOpen(false)),
       );
       document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") setMenuOpen(false);
+        if (event.key === "Escape" && menuOpen) setMenuOpen(false);
       });
       document.addEventListener("click", (event) => {
-        if (!event.target.closest(".nav-wrap")) setMenuOpen(false);
+        if (menuOpen && !event.target.closest(".site-header")) setMenuOpen(false);
       });
-      window.matchMedia("(min-width: 651px)").addEventListener("change", (event) => {
-        if (event.matches) setMenuOpen(false);
+      mobileMenu.addEventListener("change", (event) => {
+        if (!event.matches) setMenuOpen(false, false);
+        primaryNav.inert = event.matches;
+        primaryNav.setAttribute("aria-hidden", String(event.matches));
       });
       document
         .querySelectorAll("[data-add]")

@@ -1,12 +1,12 @@
-const CACHE_NAME = 'camilete-shell-v4';
+const CACHE_NAME = 'camilete-shell-v9';
 const APP_FILES = [
   './', './index.html', './menu.html', './carrito.html', './nosotros.html',
   './ubicacion.html', './contacto.html', './politicas-privacidad.html',
   './politicas-datos.html', './terminos-condiciones.html',
   './devoluciones-reembolsos.html', './aviso-legal.html', './error.html',
   './offline.html', './manifest.webmanifest', './data.json',
-  './css/styles.css?v=9', './css/temas.css?v=15', './css/responsive.css?v=10',
-  './js/data.js?v=9', './js/main.js?v=11', './js/seo.js?v=9', './js/pwa.js?v=1',
+  './css/styles.css?v=9', './css/temas.css?v=20', './css/responsive.css?v=11',
+  './js/data.js?v=9', './js/main.js?v=13', './js/seo.js?v=9', './js/pwa.js?v=1',
   './assets/icons/favicon.svg', './assets/icons/pwa-icon.svg',
   './assets/icons/pwa-192.png', './assets/icons/pwa-512.png',
   './assets/images/burger.svg', './assets/images/fries.svg',
