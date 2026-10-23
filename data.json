@@ -1,0 +1,957 @@
+{
+  "empresa": {
+    "nombre": "CAMILETE",
+    "eslogan": "Sabores que te encantan, al alcance de tu mano",
+    "descripcionCorta": "Comidas rápidas en Piedecuesta. Pide hamburguesas, perros, papas y más.",
+    "descripcionLarga": "Hamburguesas, perros calientes, papas, carnes, bebidas y más para disfrutar en Piedecuesta.",
+    "nit": "",
+    "razonSocial": "CAMILETE",
+    "direccion": "CLL 9 #13-70, San Antonio, Piedecuesta, Santander",
+    "ciudad": "Piedecuesta, Santander",
+    "pais": "Colombia",
+    "telefono": "313 870 0644 · 316 265 6214 · 318 001 9538",
+    "whatsapp": "573138700644",
+    "correo": "",
+    "horarioAtencion": "Consulta disponibilidad y horarios por WhatsApp",
+    "latitud": "",
+    "longitud": "",
+    "enlaceMapa": "https://maps.google.com/?q=CLL+9+%2313-70,+San+Antonio,+Piedecuesta",
+    "redesSociales": {
+      "facebook": "",
+      "instagram": "",
+      "tiktok": ""
+    },
+    "historia": "",
+    "mision": "",
+    "vision": "",
+    "valores": [],
+    "whatsappSecundarios": [
+      "573162656214",
+      "573180019538"
+    ],
+    "mediosPago": [
+      "Nequi · 316 265 6214"
+    ]
+  },
+  "configuracion": {
+    "colores": {
+      "modoClaro": {
+        "primario": "#c72e38",
+        "secundario": "#ffc857",
+        "fondo": "#fffaf4",
+        "texto": "#24211f",
+        "textoSecundario": "#655d58",
+        "boton": "#c72e38",
+        "botonHover": "#a91f2a",
+        "borde": "#eadfd5"
+      },
+      "modoOscuro": {
+        "primario": "#f04438",
+        "secundario": "#e7ed00",
+        "fondo": "#171717",
+        "texto": "#f6f4ed",
+        "textoSecundario": "#d0cec5",
+        "boton": "#ed3d32",
+        "botonHover": "#ff5548",
+        "borde": "#393936"
+      }
+    },
+    "temaPredeterminado": "claro",
+    "fuenteBase": "Arial, sans-serif",
+    "moneda": "COP",
+    "idioma": "es-co",
+    "mensajePedidoBase": "¡Hola, CAMILETE! Quiero este pedido:\n{items}\nMétodo: {metodo}\nZona: {zona}\nDirección: {direccion}\nDomicilio: {domicilio}\nTotal: {total}\nGracias.",
+    "domicilios": {
+      "nota": "Tarifa tentativa por zona. Confirma el valor final al tomar el pedido.",
+      "zonas": [
+        {
+          "id": "norte",
+          "nombre": "NORTE",
+          "recargo": 6000
+        },
+        {
+          "id": "sur",
+          "nombre": "SUR",
+          "recargo": 6000
+        },
+        {
+          "id": "oriente",
+          "nombre": "ORIENTE",
+          "recargo": 6000
+        },
+        {
+          "id": "occidente",
+          "nombre": "OCCIDENTE",
+          "recargo": 6000
+        }
+      ]
+    }
+  },
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Hamburguesas",
+      "descripcion": "Con o sin papa a la francesa."
+    },
+    {
+      "id": 2,
+      "nombre": "Perros",
+      "descripcion": "Perros calientes con distintas combinaciones."
+    },
+    {
+      "id": 3,
+      "nombre": "Papas",
+      "descripcion": "Salchipapas, mazorcadas y papas para compartir."
+    },
+    {
+      "id": 4,
+      "nombre": "Carnes y picadas",
+      "descripcion": "Carnes a la plancha y picadas para compartir."
+    },
+    {
+      "id": 5,
+      "nombre": "Adicionales",
+      "descripcion": "Añade algo más a tu pedido."
+    },
+    {
+      "id": 6,
+      "nombre": "Bebidas",
+      "descripcion": "Bebidas frías para acompañar."
+    },
+    {
+      "id": 7,
+      "nombre": "Granizadas y especiales",
+      "descripcion": "Granizadas, huevos con salchicha y chorizada."
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "nombre": "Corriente sin papa",
+      "descripcion": "Pan, cebolla, tomate, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
+      "precio": 14000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": true
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "nombre": "Corriente con papa",
+      "descripcion": "Pan, cebolla, tomate, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
+      "precio": 17000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": true
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "nombre": "Carne Pollo sin papa",
+      "descripcion": "Pan, cebolla, tomate, arepa, pollo desmechado, carne, queso, papa a la francesa, salsas y queso rallado.",
+      "precio": 19000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": true
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "nombre": "Carne Pollo con papa",
+      "descripcion": "Pan, cebolla, tomate, arepa, pollo desmechado, carne, queso, papa a la francesa, salsas y queso rallado.",
+      "precio": 22000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "nombre": "Milo Burguer sin papa",
+      "descripcion": "Pan, cebolla grillé, tomate, arepa, carne, queso, huevo frito, papa ripio, papa a la francesa, salsas y queso rallado.",
+      "precio": 19000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "nombre": "Milo Burguer con papa",
+      "descripcion": "Pan, cebolla grillé, tomate, arepa, carne, queso, huevo frito, papa ripio, papa a la francesa, salsas y queso rallado.",
+      "precio": 22000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "nombre": "Especial sin papa",
+      "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, papa a la francesa, salsas y queso rallado.",
+      "precio": 21000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 8,
+      "categoriaId": 1,
+      "nombre": "Especial con papa",
+      "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, papa a la francesa, salsas y queso rallado.",
+      "precio": 24000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 9,
+      "categoriaId": 1,
+      "nombre": "Rafa sin papa",
+      "descripcion": "Pan, cebolla grillé, tomate, carne desmechada, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
+      "precio": 21000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 10,
+      "categoriaId": 1,
+      "nombre": "Rafa con papa",
+      "descripcion": "Pan, cebolla grillé, tomate, carne desmechada, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
+      "precio": 24000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 11,
+      "categoriaId": 1,
+      "nombre": "La Criolla sin papa",
+      "descripcion": "Pan, cebolla, tomate, filete de pechuga, carne, queso, jamón, tocineta, chorizo, papa a la francesa, salsas y queso rallado.",
+      "precio": 23000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 12,
+      "categoriaId": 1,
+      "nombre": "La Criolla con papa",
+      "descripcion": "Pan, cebolla, tomate, filete de pechuga, carne, queso, jamón, tocineta, chorizo, papa a la francesa, salsas y queso rallado.",
+      "precio": 26000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 13,
+      "categoriaId": 1,
+      "nombre": "Super sin papa",
+      "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, dos carnes, dos quesos, dos jamones, tocineta, papa a la francesa, salsas y queso rallado.",
+      "precio": 26000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 14,
+      "categoriaId": 1,
+      "nombre": "Super con papa",
+      "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, dos carnes, dos quesos, dos jamones, tocineta, papa a la francesa, salsas y queso rallado.",
+      "precio": 29000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 15,
+      "categoriaId": 1,
+      "nombre": "Camilete sin papa",
+      "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, filete de pechuga, carne desmechada, papa a la francesa, salsas y queso rallado.",
+      "precio": 31000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 16,
+      "categoriaId": 1,
+      "nombre": "Camilete con papa",
+      "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, filete de pechuga, carne desmechada, papa a la francesa, salsas y queso rallado.",
+      "precio": 34000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 17,
+      "categoriaId": 2,
+      "nombre": "Perro corriente sin papa",
+      "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, queso rallado, papa a la francesa y salsas.",
+      "precio": 10000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 18,
+      "categoriaId": 2,
+      "nombre": "Perro corriente con papa",
+      "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, queso rallado, papa a la francesa y salsas.",
+      "precio": 13000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 19,
+      "categoriaId": 2,
+      "nombre": "Perro especial sin papa",
+      "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
+      "precio": 16000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 20,
+      "categoriaId": 2,
+      "nombre": "Perro especial con papa",
+      "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
+      "precio": 19000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 21,
+      "categoriaId": 2,
+      "nombre": "Perro Americano sin papa",
+      "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, queso fundido, tocineta, papa a la francesa, salsas y queso rallado.",
+      "precio": 22000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 22,
+      "categoriaId": 2,
+      "nombre": "Perro Americano con papa",
+      "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, queso fundido, tocineta, papa a la francesa, salsas y queso rallado.",
+      "precio": 25000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 23,
+      "categoriaId": 2,
+      "nombre": "Perro Loco sin papa",
+      "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, carne desmechada, dos quesos fundidos, papa a la francesa, salsas y queso rallado.",
+      "precio": 27000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 24,
+      "categoriaId": 2,
+      "nombre": "Perro Loco con papa",
+      "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, carne desmechada, dos quesos fundidos, papa a la francesa, salsas y queso rallado.",
+      "precio": 30000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 25,
+      "categoriaId": 2,
+      "nombre": "Chori perro sin papa",
+      "descripcion": "Pan, chorizo Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
+      "precio": 22000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 26,
+      "categoriaId": 2,
+      "nombre": "Chori perro con papa",
+      "descripcion": "Pan, chorizo Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
+      "precio": 25000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 27,
+      "categoriaId": 2,
+      "nombre": "Perro Campesino sin papa",
+      "descripcion": "Pan, salchicha long Zenú, cebolla grillé, papa ripio, pollo desmechado, maíz, queso fundido, chorizo Zenú, papa a la francesa, salsas y queso rallado.",
+      "precio": 22000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 28,
+      "categoriaId": 2,
+      "nombre": "Perro Campesino con papa",
+      "descripcion": "Pan, salchicha long Zenú, cebolla grillé, papa ripio, pollo desmechado, maíz, queso fundido, chorizo Zenú, papa a la francesa, salsas y queso rallado.",
+      "precio": 25000,
+      "imagen": "assets/images/hotdog.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 29,
+      "categoriaId": 3,
+      "nombre": "Salchipapa pequeño",
+      "descripcion": "Papa a la francesa, salsas, salchicha long Zenú y queso rallado.",
+      "precio": 13000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 30,
+      "categoriaId": 3,
+      "nombre": "Salchipapa grande",
+      "descripcion": "Papa a la francesa, salsas, salchicha long Zenú y queso rallado.",
+      "precio": 17000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 31,
+      "categoriaId": 3,
+      "nombre": "Salchipapa especial pequeño",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, salchicha long Zenú y queso rallado.",
+      "precio": 18000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 32,
+      "categoriaId": 3,
+      "nombre": "Salchipapa especial grande",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, salchicha long Zenú y queso rallado.",
+      "precio": 26000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 33,
+      "categoriaId": 3,
+      "nombre": "Chori papa pequeño",
+      "descripcion": "Papa a la francesa, salsas, chorizo y queso rallado.",
+      "precio": 14000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 34,
+      "categoriaId": 3,
+      "nombre": "Chori papa grande",
+      "descripcion": "Papa a la francesa, salsas, chorizo y queso rallado.",
+      "precio": 18000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 35,
+      "categoriaId": 3,
+      "nombre": "Chori papa especial pequeño",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, chorizo Zenú y queso rallado.",
+      "precio": 19000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 36,
+      "categoriaId": 3,
+      "nombre": "Chori papa especial grande",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, chorizo Zenú y queso rallado.",
+      "precio": 28000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 37,
+      "categoriaId": 3,
+      "nombre": "Mazorcada pequeño",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, mazorca y queso rallado.",
+      "precio": 20000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 38,
+      "categoriaId": 3,
+      "nombre": "Mazorcada grande",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, mazorca y queso rallado.",
+      "precio": 32000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 39,
+      "categoriaId": 3,
+      "nombre": "Papas locas pequeño",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada y queso fundido.",
+      "precio": 17000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 40,
+      "categoriaId": 3,
+      "nombre": "Papas locas grande",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada y queso fundido.",
+      "precio": 27000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 41,
+      "categoriaId": 3,
+      "nombre": "Papas locas especiales pequeño",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, maíz, chorizo y queso fundido.",
+      "precio": 21000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 42,
+      "categoriaId": 3,
+      "nombre": "Papas locas especiales grande",
+      "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, maíz, chorizo y queso fundido.",
+      "precio": 36000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 43,
+      "categoriaId": 3,
+      "nombre": "Porción de papa pequeño",
+      "descripcion": "Porción de papa a la francesa.",
+      "precio": 10000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 44,
+      "categoriaId": 3,
+      "nombre": "Porción de papa grande",
+      "descripcion": "Porción de papa a la francesa.",
+      "precio": 16000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 45,
+      "categoriaId": 4,
+      "nombre": "Media chata 200 g",
+      "descripcion": "Chata a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
+      "precio": 20000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 46,
+      "categoriaId": 4,
+      "nombre": "Chatas completas 400 g",
+      "descripcion": "Chatas a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
+      "precio": 35000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 47,
+      "categoriaId": 4,
+      "nombre": "Media pechuga 200 g",
+      "descripcion": "Pechuga a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
+      "precio": 17000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 48,
+      "categoriaId": 4,
+      "nombre": "Pechuga completa 400 g",
+      "descripcion": "Pechuga a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
+      "precio": 30000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 49,
+      "categoriaId": 4,
+      "nombre": "Picada para 2 personas",
+      "descripcion": "Media pechuga, media chata a la plancha, ensalada, dos arepas, chorizo, papa a la francesa y salsas.",
+      "precio": 40000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 50,
+      "categoriaId": 4,
+      "nombre": "Picada para 4 personas",
+      "descripcion": "Pechuga 400 g, chatas 400 g a la plancha, ensalada, cuatro arepas, chorizo, papa a la francesa y salsas.",
+      "precio": 66000,
+      "imagen": "assets/images/burger.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 51,
+      "categoriaId": 5,
+      "nombre": "Carne de hamburguesa",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 8000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 52,
+      "categoriaId": 5,
+      "nombre": "Jamón o queso",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 3000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 53,
+      "categoriaId": 5,
+      "nombre": "Carne o pollo desmechado",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 7000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 54,
+      "categoriaId": 5,
+      "nombre": "Tocineta",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 5000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 55,
+      "categoriaId": 5,
+      "nombre": "Arepa x 3 con queso y salsa",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 4000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 56,
+      "categoriaId": 5,
+      "nombre": "Chorizo",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 7000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 57,
+      "categoriaId": 5,
+      "nombre": "Salchicha Americana Zenú",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 5000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 58,
+      "categoriaId": 5,
+      "nombre": "Salchicha long Zenú",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 4000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 59,
+      "categoriaId": 5,
+      "nombre": "Sobre de salsa adicional",
+      "descripcion": "Adicional para acompañar tu pedido.",
+      "precio": 1000,
+      "imagen": "assets/images/fries.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 60,
+      "categoriaId": 6,
+      "nombre": "Jugo Hit PET 500 ml",
+      "descripcion": "Bebida.",
+      "precio": 4000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 61,
+      "categoriaId": 6,
+      "nombre": "Jugo Hit litro",
+      "descripcion": "Bebida.",
+      "precio": 8000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 62,
+      "categoriaId": 6,
+      "nombre": "Gaseosa personal",
+      "descripcion": "Bebida.",
+      "precio": 3500,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 63,
+      "categoriaId": 6,
+      "nombre": "Gaseosa 1.5 litros",
+      "descripcion": "Bebida.",
+      "precio": 9000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 64,
+      "categoriaId": 6,
+      "nombre": "Gaseosa mega 2.5 litros",
+      "descripcion": "Bebida.",
+      "precio": 12000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 65,
+      "categoriaId": 6,
+      "nombre": "Gatorade",
+      "descripcion": "Bebida.",
+      "precio": 6000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 66,
+      "categoriaId": 6,
+      "nombre": "Soda",
+      "descripcion": "Bebida.",
+      "precio": 5000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 67,
+      "categoriaId": 6,
+      "nombre": "Agua personal",
+      "descripcion": "Bebida.",
+      "precio": 3000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 68,
+      "categoriaId": 6,
+      "nombre": "PET 400 ml",
+      "descripcion": "Bebida.",
+      "precio": 4000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 69,
+      "categoriaId": 6,
+      "nombre": "Cerveza",
+      "descripcion": "Bebida.",
+      "precio": 5000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 70,
+      "categoriaId": 7,
+      "nombre": "Granizada de mandarina",
+      "descripcion": "Granizada de mandarina.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 71,
+      "categoriaId": 7,
+      "nombre": "Granizada de limón",
+      "descripcion": "Granizada de limón.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 72,
+      "categoriaId": 7,
+      "nombre": "Granizada de maracuyá",
+      "descripcion": "Granizada de maracuyá.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 73,
+      "categoriaId": 7,
+      "nombre": "Granizada de frutos rojos",
+      "descripcion": "Granizada de frutos rojos.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 74,
+      "categoriaId": 7,
+      "nombre": "Granizada de lulo",
+      "descripcion": "Granizada de lulo.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 75,
+      "categoriaId": 7,
+      "nombre": "Granizada de hierbabuena",
+      "descripcion": "Granizada de hierbabuena.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 76,
+      "categoriaId": 7,
+      "nombre": "Granizada de guanábana",
+      "descripcion": "Granizada de guanábana.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 77,
+      "categoriaId": 7,
+      "nombre": "Granizada de naranja",
+      "descripcion": "Granizada de naranja.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 78,
+      "categoriaId": 7,
+      "nombre": "Granizada de mora",
+      "descripcion": "Granizada de mora.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 79,
+      "categoriaId": 7,
+      "nombre": "Granizada de mango",
+      "descripcion": "Granizada de mango.",
+      "precio": 10000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 80,
+      "categoriaId": 7,
+      "nombre": "Huevos con salchicha y arepa",
+      "descripcion": "Huevos con salchicha y arepa.",
+      "precio": 13500,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    },
+    {
+      "id": 81,
+      "categoriaId": 7,
+      "nombre": "Chorizada (3 chorizos diferentes)",
+      "descripcion": "Tres chorizos diferentes.",
+      "precio": 27000,
+      "imagen": "assets/images/lemonade.svg",
+      "disponible": true,
+      "destacado": false
+    }
+  ],
+  "seo": {
+    "tituloPrincipal": "CAMILETE | Hamburguesas, perros y comidas rápidas en Piedecuesta",
+    "descripcionPrincipal": "Pide hamburguesas, perros calientes, salchipapas, carnes, bebidas y más. Consulta la carta CAMILETE y ordena por WhatsApp en Piedecuesta.",
+    "palabrasClave": "CAMILETE, comidas rápidas, hamburguesas, perros calientes, salchipapas, Piedecuesta, San Antonio, domicilios",
+    "autor": "CAMILETE"
+  },
+  "paginasLegales": {
+    "politicasPrivacidad": "",
+    "politicasDatosPersonales": "",
+    "terminosCondiciones": "",
+    "politicasDevoluciones": "",
+    "avisoLegal": ""
+  },
+  "piePagina": {
+    "textoDerechos": "© 2026 CAMILETE — Todos los derechos reservados.",
+    "textoCumplimiento": "Tratamos tus datos de acuerdo con la Ley 1581 de 2012 y las normas colombianas aplicables."
+  },
+  "version": 2
+}

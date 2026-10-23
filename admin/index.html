@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Administración | CAMILETE</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/admin.css?v=6">
+  <script defer src="../js/data.js?v=8"></script>
+  <script defer src="js/admin.js?v=8"></script>
+</head>
+<body>
+  <main id="login-screen" class="login-screen">
+    <div class="login-card">
+      <section class="login-brand-panel" aria-label="CAMILETE Comida rápida">
+        <a class="login-brand" href="../index.html"><img src="../assets/icons/favicon.svg" alt=""><span><strong>CAMILETE</strong><small>COMIDA RÁPIDA</small></span></a>
+        <div class="brand-message"><span class="eyebrow">PANEL DE ADMINISTRACIÓN</span><h1>Tu negocio,<br><em>bien atendido.</em></h1><p>Actualiza el menú, organiza tus pedidos y mantén tu información al día.</p></div>
+        <span class="brand-signoff">SABOR PARA COMPARTIR <b>♥</b></span>
+      </section>
+      <section class="login-content" aria-labelledby="login-title">
+        <div class="login-topline"><a href="../index.html" class="back-link">← Volver al sitio</a><button id="login-theme-toggle" class="login-theme-toggle" type="button" aria-label="Activar modo oscuro"></button></div>
+        <span class="eyebrow">ACCESO SEGURO</span>
+        <h2 id="login-title">Hola de nuevo.</h2>
+        <p class="login-intro">Ingresa tu contraseña para continuar al panel.</p>
+        <form id="login-form" class="login-form">
+          <label for="admin-password">Contraseña</label>
+          <div class="password-field"><input id="admin-password" name="password" type="password" autocomplete="current-password" required autofocus><button id="toggle-password" type="button" aria-label="Mostrar contraseña" aria-pressed="false"></button></div>
+          <button id="login-button" class="login-submit" type="submit">Ingresar al panel <span aria-hidden="true">↗</span></button>
+          <p id="login-message" role="status" aria-live="polite"></p>
+        </form>
+        <p class="login-footnote">Tu sesión se mantiene abierta en esta pestaña.</p>
+      </section>
+    </div>
+  </main>
+  <div id="admin-shell" hidden>
+    <header><a href="../index.html">← Ver sitio</a><div><strong>CAMILETE</strong><span>ADMINISTRACIÓN</span></div><div class="admin-header-actions"><button id="export">Descargar data.json ↓</button><button id="logout" class="logout-button">Cerrar sesión</button></div></header>
+    <main class="admin-main"><aside><p class="eyebrow">GESTIÓN DEL SITIO</p><h1>Tu contenido,<br>en tus manos.</h1><p>Edita productos, información y textos. Descarga el JSON actualizado para publicarlo.</p><label class="upload">Importar data.json<input type="file" id="import" accept=".json,application/json"></label><button id="preview">Vista previa del sitio ↗</button><p class="note">Los cambios se guardan en este navegador. Para que otros visitantes los vean, descarga y reemplaza <code>data.json</code> en el sitio.</p></aside><section class="editor"><div class="tabs"><button class="tab active" data-tab="menu">Menú</button><button class="tab" data-tab="empresa">Empresa</button><button class="tab" data-tab="domicilios">Domicilios</button><button class="tab" data-tab="seo">SEO</button><button class="tab" data-tab="legales">Legales</button><button class="tab" data-tab="tema">Tema</button></div><div id="panel"></div></section></main>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </div>
+</body>
+</html>
