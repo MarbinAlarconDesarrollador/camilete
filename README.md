@@ -6,6 +6,10 @@ Sitio web estático para CAMILETE. El contenido publicado se define en `data.jso
 
 Sirve la carpeta desde un servidor HTTP estático (por ejemplo, la función de vista previa de tu editor o el hosting elegido). `fetch()` no puede cargar `data.json` de forma fiable si se abre `index.html` directamente como archivo.
 
+### Aplicación instalable (PWA)
+
+El sitio incluye `manifest.webmanifest`, iconos de instalación y un service worker que guarda las páginas y recursos principales para volver a abrirlos sin conexión. En navegadores compatibles aparece **Instalar CAMILETE** cuando el navegador habilita la instalación. En iPhone/iPad, usa **Compartir → Añadir a pantalla de inicio**. Para publicar la PWA, el hosting debe servir el sitio por HTTPS; `localhost` también sirve para desarrollo. El primer acceso necesita conexión para completar la caché inicial.
+
 El administrador está en `/admin/` y solicita una contraseña. La comprobación usa SHA-256 en el navegador y mantiene la sesión en la pestaña. Como el sitio es estático, esto solo disuade el acceso casual: no reemplaza autenticación en servidor y alguien con acceso a los archivos puede inspeccionar o modificar la protección. Para restringir el panel en producción, protege `/admin/` con el control de acceso del hosting o añade un backend. La verificación criptográfica requiere HTTPS o `localhost`.
 
 El panel edita productos y categorías, datos de la empresa, tarifas tentativas de domicilio por zona, SEO, textos legales y colores. Los cambios se guardan en el almacenamiento local de ese navegador. Usa **Descargar data.json** y publica el archivo reemplazando el `data.json` del sitio para que los cambios queden disponibles a todos los visitantes.

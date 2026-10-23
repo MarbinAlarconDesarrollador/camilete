@@ -1,0 +1,23 @@
+{
+  "id": "./",
+  "name": "CAMILETE · Comida rápida",
+  "short_name": "CAMILETE",
+  "description": "Pide tus favoritos de CAMILETE en Piedecuesta.",
+  "lang": "es-CO",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#c72e38",
+  "background_color": "#fffaf4",
+  "categories": ["food", "shopping"],
+  "icons": [
+    { "src": "assets/icons/pwa-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/pwa-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Ver el menú", "short_name": "Menú", "url": "./menu.html", "icons": [{ "src": "assets/icons/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml" }] },
+    { "name": "Mi carrito", "short_name": "Carrito", "url": "./carrito.html", "icons": [{ "src": "assets/icons/pwa-icon.svg", "sizes": "any", "type": "image/svg+xml" }] }
+  ]
+}

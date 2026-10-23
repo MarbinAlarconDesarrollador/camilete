@@ -43,6 +43,12 @@ html[data-theme="oscuro"] .developer-credit{background:#26251d;border-color:#575
 html[data-theme="oscuro"] .developer-credit-name,html[data-theme="oscuro"] .developer-credit>a:hover,html[data-theme="oscuro"] .developer-credit>a:focus-visible{color:#edf000}
 html[data-theme="oscuro"] .developer-credit>a{border-color:#57552a}
 @media(max-width:650px){.developer-credit{gap:8px 10px;padding:13px 15px;font-size:.74rem}.developer-credit-label{flex-basis:100%;text-align:center}.developer-credit>a{padding-left:10px}}
+.install-app-button{position:fixed;z-index:12;left:23px;bottom:24px;padding:12px 16px;border:1px solid #7f1d25;border-radius:999px;background:#a91f2a;color:#fff;font:700 .82rem/1.2 var(--font-base,Arial,sans-serif);box-shadow:0 5px 18px #0003;cursor:pointer;transition:transform .2s,background .2s}
+.install-app-button:hover{background:#7f1d25;transform:translateY(-2px)}
+.install-app-button:focus-visible{outline:3px solid var(--secundario,#ffc857);outline-offset:3px}
+html[data-theme="oscuro"] .install-app-button{background:#edf000;border-color:#edf000;color:#171717}
+html[data-theme="oscuro"] .install-app-button:hover{background:#fff;border-color:#fff}
+@media(max-width:650px){.install-app-button{left:15px;bottom:86px;padding:11px 13px;font-size:.76rem}}
 .add-to-cart{min-height:42px;white-space:nowrap}
 .cart-float{min-height:50px}
 @media(max-width:650px){.add-to-cart{font-size:.8rem;padding:10px 12px;white-space:normal}}
