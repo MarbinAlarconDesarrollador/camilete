@@ -23,6 +23,26 @@ html[data-theme="oscuro"] .button-light{background:var(--secundario,#edf000);col
 html[data-theme="claro"] .site-header .header-cta{background:var(--primario,#c72e38);color:#fff;box-shadow:0 3px 10px #6c192022}
 html[data-theme="claro"] .site-header .header-cta:hover{background:var(--botonHover,#a91f2a);color:#fff}
 html[data-theme="claro"] .site-header .header-cta:focus-visible{outline:3px solid var(--primario,#c72e38);outline-offset:3px}
+html[data-theme="claro"] .button:not(.button-light){background:#a91f2a;color:#fff;border:2px solid #a91f2a;box-shadow:0 3px 10px #50101630}
+html[data-theme="claro"] .button:not(.button-light):hover{background:#7f1d25;color:#fff;border-color:#7f1d25}
+html[data-theme="claro"] .button:not(.button-light):focus-visible{outline:3px solid #7f1d25;outline-offset:3px}
+
+/* The light theme can use a pale banner color, so use dark copy and a clear CTA. */
+html[data-theme="claro"] .menu-banner{color:#24211f}
+html[data-theme="claro"] .menu-banner .eyebrow{color:#7f1d25}
+html[data-theme="claro"] .menu-banner .banner-scribble{color:#7f1d25}
+html[data-theme="claro"] .menu-banner .button-light{background:#7f1d25;color:#fff;border:2px solid #7f1d25;box-shadow:0 3px 12px #2e090b33}
+html[data-theme="claro"] .menu-banner .button-light:hover{background:#571318;color:#fff;border-color:#571318}
+html[data-theme="claro"] .menu-banner .button-light:focus-visible{outline:3px solid #7f1d25;outline-offset:3px}
+.developer-credit{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px auto 0;padding:15px 22px;width:max-content;max-width:100%;border:1px solid #6a5546;border-radius:999px;background:#29221e;color:#e8d8c7;font-size:.78rem;letter-spacing:.04em}
+.developer-credit-label{text-transform:uppercase;font-size:.62rem;letter-spacing:.16em;color:#c6b9ae}
+.developer-credit-name{font-family:Georgia,serif;font-size:1rem;font-style:italic;color:#ffe0a0}
+.developer-credit>a{padding-left:12px;border-left:1px solid #6a5546;color:#fff;font-weight:700;white-space:nowrap;transition:color .2s}
+.developer-credit>a:hover,.developer-credit>a:focus-visible{color:#ffe0a0}
+html[data-theme="oscuro"] .developer-credit{background:#26251d;border-color:#57552a;color:#f6f4ed}
+html[data-theme="oscuro"] .developer-credit-name,html[data-theme="oscuro"] .developer-credit>a:hover,html[data-theme="oscuro"] .developer-credit>a:focus-visible{color:#edf000}
+html[data-theme="oscuro"] .developer-credit>a{border-color:#57552a}
+@media(max-width:650px){.developer-credit{gap:8px 10px;padding:13px 15px;font-size:.74rem}.developer-credit-label{flex-basis:100%;text-align:center}.developer-credit>a{padding-left:10px}}
 .add-to-cart{min-height:42px;white-space:nowrap}
 .cart-float{min-height:50px}
 @media(max-width:650px){.add-to-cart{font-size:.8rem;padding:10px 12px;white-space:normal}}
