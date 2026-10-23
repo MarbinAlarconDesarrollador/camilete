@@ -166,7 +166,7 @@
       };
       const productCard = (p) =>
         `<article class="product-card"><img src="${esc(p.imagen || "assets/images/burger.svg")}" alt="${esc(p.nombre)}" loading="lazy"><div class="product-info"><span class="eyebrow">${esc(categories.find((c) => c.id === p.categoriaId)?.nombre || "Favoritos")}</span><h3>${esc(p.nombre)}</h3><p>${esc(p.descripcion)}</p><div class="product-bottom"><strong>${money(p.precio)}</strong><button type="button" class="button small add-to-cart" data-add="${esc(p.id)}" ${p.disponible === false ? "disabled" : ""}>${p.disponible === false ? "Agotado" : "＋ Agregar al carrito"}</button></div></div></article>`;
-      const header = `<a class="skip-link" href="#contenido">Saltar al contenido principal</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>${esc(e.nombre || "CAMILETE")}<small>COMIDA CON ANTOJO</small></span></a><nav aria-label="Navegación principal">${nav.map(([n, u]) => `<a href="${u}" ${file === u ? 'aria-current="page"' : ""}>${n}</a>`).join("")}</nav><div class="header-actions"><button class="icon-button" id="theme-toggle" aria-label="Cambiar tema">${theme === "claro" ? "☾" : "☀"}</button><a class="cart-link" href="carrito.html" aria-label="Carrito, ${cart().reduce((a, i) => a + i.qty, 0)} artículos">🛒 <span id="cart-count">${cart().reduce((a, i) => a + i.qty, 0)}</span></a><a class="button header-cta" href="menu.html">Pedir ahora <span>↗</span></a><button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">☰</button></div></div></header>`;
+      const header = `<a class="skip-link" href="#contenido">Saltar al contenido principal</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>${esc(e.nombre || "CAMILETE")}<small>COMIDA CON ANTOJO</small></span></a><nav id="primary-navigation" aria-label="Navegación principal">${nav.map(([n, u]) => `<a href="${u}" ${file === u ? 'aria-current="page"' : ""}>${n}</a>`).join("")}</nav><div class="header-actions"><button class="icon-button" id="theme-toggle" aria-label="Cambiar tema">${theme === "claro" ? "☾" : "☀"}</button><a class="cart-link" href="carrito.html" aria-label="Carrito, ${cart().reduce((a, i) => a + i.qty, 0)} artículos">🛒 <span id="cart-count">${cart().reduce((a, i) => a + i.qty, 0)}</span></a><a class="button header-cta" href="menu.html">Pedir ahora <span>↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú"><span></span><span></span><span></span></button></div></div></header>`;
       const footer = `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">C</span><span>${esc(e.nombre || "CAMILETE")}<small>SABOR PARA COMPARTIR</small></span></a><p>${esc(e.descripcionCorta || "Comida rápida deliciosa en Piedecuesta.")}</p></div><div><h3>Encuéntranos</h3><p>${esc(e.direccion || e.ciudad || "Piedecuesta, Santander")}</p><p>${esc(e.horarioAtencion || "Consulta nuestros horarios")}</p><a href="${esc(waLink)}" target="_blank" rel="noopener">WhatsApp ↗</a></div><div><h3>Explora</h3>${nav.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div><div><h3>Información legal</h3>${legal.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div></div><div class="footer-bottom"><span>${esc(data.piePagina?.textoDerechos || "© 2026 CAMILETE")}</span><span>${esc(e.razonSocial || e.nombre || "CAMILETE")} ${e.nit ? `· NIT ${esc(e.nit)}` : ""} · ${esc(e.direccion || "Piedecuesta, Colombia")}</span><a href="admin/">Administración</a></div><div class="developer-credit"><span class="developer-credit-label">Diseño y desarrollo</span><span class="developer-credit-name">Marbin Alarcón</span><a href="tel:+573205578471" aria-label="Llamar a Marbin Alarcón al 320 557 8471">320 557 8471 <span aria-hidden="true">↗</span></a></div></footer><a class="whatsapp-float" href="${esc(waLink)}" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">☏</a><button id="access-toggle" class="access-toggle" aria-label="Abrir opciones de accesibilidad">♿</button><aside id="access-panel" class="access-panel" aria-label="Accesibilidad" hidden><h2>Accesibilidad</h2><button data-access="larger">Aumentar texto</button><button data-access="smaller">Reducir texto</button><button data-access="contrast">Alto contraste</button><button data-access="links">Resaltar enlaces</button><button data-access="read">Leer página</button><button data-access="reset">Restaurar ajustes</button></aside><div id="cart-toast" class="cart-toast" role="status" aria-live="polite" aria-atomic="true"></div>`;
       const productsSection = (items, filters = false) =>
         `${filters ? `<div class="filters"><button class="filter-chip active" data-category="all">Todo el menú</button>${categories.map((c) => `<button class="filter-chip" data-category="${c.id}">${esc(c.nombre)}</button>`).join("")}</div>` : ""}<div class="product-grid">${items.map(productCard).join("") || '<p class="empty-state">Pronto tendremos novedades en el menú.</p>'}</div>`;
@@ -275,12 +275,26 @@
         );
       });
       const mt = document.querySelector(".menu-toggle");
+      const primaryNav = document.querySelector("#primary-navigation");
+      const setMenuOpen = (open) => {
+        mt.setAttribute("aria-expanded", String(open));
+        mt.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+        primaryNav.classList.toggle("nav-open", open);
+      };
       mt.addEventListener("click", () => {
-        const open = mt.getAttribute("aria-expanded") === "true";
-        mt.setAttribute("aria-expanded", String(!open));
-        document
-          .querySelector(".site-header nav")
-          .classList.toggle("nav-open", !open);
+        setMenuOpen(mt.getAttribute("aria-expanded") !== "true");
+      });
+      primaryNav.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => setMenuOpen(false)),
+      );
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenuOpen(false);
+      });
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".nav-wrap")) setMenuOpen(false);
+      });
+      window.matchMedia("(min-width: 651px)").addEventListener("change", (event) => {
+        if (event.matches) setMenuOpen(false);
       });
       document
         .querySelectorAll("[data-add]")
