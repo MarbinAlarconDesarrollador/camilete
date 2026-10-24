@@ -619,7 +619,7 @@ html[data-theme="oscuro"] .developer-credit > a {
 }
 @media (max-width: 650px) {
   .install-app-button {
-    left: 15px;
+    left: 20px;
     /*bottom: 84px;*/
     bottom: 15px;
     width: 56px;
