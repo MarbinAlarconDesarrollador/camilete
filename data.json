@@ -131,7 +131,7 @@
       "nombre": "Corriente sin papa",
       "descripcion": "Pan, cebolla, tomate, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 14000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": true
     },
@@ -141,7 +141,7 @@
       "nombre": "Corriente con papa",
       "descripcion": "Pan, cebolla, tomate, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 17000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": true
     },
@@ -151,7 +151,7 @@
       "nombre": "Carne Pollo sin papa",
       "descripcion": "Pan, cebolla, tomate, arepa, pollo desmechado, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 19000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": true
     },
@@ -161,7 +161,7 @@
       "nombre": "Carne Pollo con papa",
       "descripcion": "Pan, cebolla, tomate, arepa, pollo desmechado, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 22000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -171,7 +171,7 @@
       "nombre": "Milo Burguer sin papa",
       "descripcion": "Pan, cebolla grillé, tomate, arepa, carne, queso, huevo frito, papa ripio, papa a la francesa, salsas y queso rallado.",
       "precio": 19000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -181,7 +181,7 @@
       "nombre": "Milo Burguer con papa",
       "descripcion": "Pan, cebolla grillé, tomate, arepa, carne, queso, huevo frito, papa ripio, papa a la francesa, salsas y queso rallado.",
       "precio": 22000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -191,7 +191,7 @@
       "nombre": "Especial sin papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 21000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -201,7 +201,7 @@
       "nombre": "Especial con papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 24000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -211,7 +211,7 @@
       "nombre": "Rafa sin papa",
       "descripcion": "Pan, cebolla grillé, tomate, carne desmechada, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 21000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -221,7 +221,7 @@
       "nombre": "Rafa con papa",
       "descripcion": "Pan, cebolla grillé, tomate, carne desmechada, arepa, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 24000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -231,7 +231,7 @@
       "nombre": "La Criolla sin papa",
       "descripcion": "Pan, cebolla, tomate, filete de pechuga, carne, queso, jamón, tocineta, chorizo, papa a la francesa, salsas y queso rallado.",
       "precio": 23000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -241,7 +241,7 @@
       "nombre": "La Criolla con papa",
       "descripcion": "Pan, cebolla, tomate, filete de pechuga, carne, queso, jamón, tocineta, chorizo, papa a la francesa, salsas y queso rallado.",
       "precio": 26000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -251,7 +251,7 @@
       "nombre": "Super sin papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, dos carnes, dos quesos, dos jamones, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 26000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -261,7 +261,7 @@
       "nombre": "Super con papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, dos carnes, dos quesos, dos jamones, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 29000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -271,7 +271,7 @@
       "nombre": "Camilete sin papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, filete de pechuga, carne desmechada, papa a la francesa, salsas y queso rallado.",
       "precio": 31000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -281,7 +281,7 @@
       "nombre": "Camilete con papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, filete de pechuga, carne desmechada, papa a la francesa, salsas y queso rallado.",
       "precio": 34000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -291,7 +291,7 @@
       "nombre": "Perro corriente sin papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, queso rallado, papa a la francesa y salsas.",
       "precio": 10000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -301,7 +301,7 @@
       "nombre": "Perro corriente con papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, queso rallado, papa a la francesa y salsas.",
       "precio": 13000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -311,7 +311,7 @@
       "nombre": "Perro especial sin papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
       "precio": 16000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -321,7 +321,7 @@
       "nombre": "Perro especial con papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
       "precio": 19000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -331,7 +331,7 @@
       "nombre": "Perro Americano sin papa",
       "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, queso fundido, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 22000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -341,7 +341,7 @@
       "nombre": "Perro Americano con papa",
       "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, queso fundido, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 25000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -351,7 +351,7 @@
       "nombre": "Perro Loco sin papa",
       "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, carne desmechada, dos quesos fundidos, papa a la francesa, salsas y queso rallado.",
       "precio": 27000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -361,7 +361,7 @@
       "nombre": "Perro Loco con papa",
       "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, carne desmechada, dos quesos fundidos, papa a la francesa, salsas y queso rallado.",
       "precio": 30000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -371,7 +371,7 @@
       "nombre": "Chori perro sin papa",
       "descripcion": "Pan, chorizo Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
       "precio": 22000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -381,7 +381,7 @@
       "nombre": "Chori perro con papa",
       "descripcion": "Pan, chorizo Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
       "precio": 25000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -391,7 +391,7 @@
       "nombre": "Perro Campesino sin papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla grillé, papa ripio, pollo desmechado, maíz, queso fundido, chorizo Zenú, papa a la francesa, salsas y queso rallado.",
       "precio": 22000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -401,7 +401,7 @@
       "nombre": "Perro Campesino con papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla grillé, papa ripio, pollo desmechado, maíz, queso fundido, chorizo Zenú, papa a la francesa, salsas y queso rallado.",
       "precio": 25000,
-      "imagen": "assets/images/hotdog.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -411,7 +411,7 @@
       "nombre": "Salchipapa pequeño",
       "descripcion": "Papa a la francesa, salsas, salchicha long Zenú y queso rallado.",
       "precio": 13000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -421,7 +421,7 @@
       "nombre": "Salchipapa grande",
       "descripcion": "Papa a la francesa, salsas, salchicha long Zenú y queso rallado.",
       "precio": 17000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -431,7 +431,7 @@
       "nombre": "Salchipapa especial pequeño",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, salchicha long Zenú y queso rallado.",
       "precio": 18000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -441,7 +441,7 @@
       "nombre": "Salchipapa especial grande",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, salchicha long Zenú y queso rallado.",
       "precio": 26000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -451,7 +451,7 @@
       "nombre": "Chori papa pequeño",
       "descripcion": "Papa a la francesa, salsas, chorizo y queso rallado.",
       "precio": 14000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -461,7 +461,7 @@
       "nombre": "Chori papa grande",
       "descripcion": "Papa a la francesa, salsas, chorizo y queso rallado.",
       "precio": 18000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -471,7 +471,7 @@
       "nombre": "Chori papa especial pequeño",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, chorizo Zenú y queso rallado.",
       "precio": 19000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -481,7 +481,7 @@
       "nombre": "Chori papa especial grande",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, chorizo Zenú y queso rallado.",
       "precio": 28000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -491,7 +491,7 @@
       "nombre": "Mazorcada pequeño",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, mazorca y queso rallado.",
       "precio": 20000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -501,7 +501,7 @@
       "nombre": "Mazorcada grande",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, mazorca y queso rallado.",
       "precio": 32000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -511,7 +511,7 @@
       "nombre": "Papas locas pequeño",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada y queso fundido.",
       "precio": 17000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -521,7 +521,7 @@
       "nombre": "Papas locas grande",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada y queso fundido.",
       "precio": 27000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -531,7 +531,7 @@
       "nombre": "Papas locas especiales pequeño",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, maíz, chorizo y queso fundido.",
       "precio": 21000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -541,7 +541,7 @@
       "nombre": "Papas locas especiales grande",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, pollo desmechado, carne desmechada, maíz, chorizo y queso fundido.",
       "precio": 36000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -551,7 +551,7 @@
       "nombre": "Porción de papa pequeño",
       "descripcion": "Porción de papa a la francesa.",
       "precio": 10000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -561,7 +561,7 @@
       "nombre": "Porción de papa grande",
       "descripcion": "Porción de papa a la francesa.",
       "precio": 16000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -571,7 +571,7 @@
       "nombre": "Media chata 200 g",
       "descripcion": "Chata a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
       "precio": 20000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -581,7 +581,7 @@
       "nombre": "Chatas completas 400 g",
       "descripcion": "Chatas a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
       "precio": 35000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -591,7 +591,7 @@
       "nombre": "Media pechuga 200 g",
       "descripcion": "Pechuga a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
       "precio": 17000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -601,7 +601,7 @@
       "nombre": "Pechuga completa 400 g",
       "descripcion": "Pechuga a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
       "precio": 30000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -611,7 +611,7 @@
       "nombre": "Picada para 2 personas",
       "descripcion": "Media pechuga, media chata a la plancha, ensalada, dos arepas, chorizo, papa a la francesa y salsas.",
       "precio": 40000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -621,7 +621,7 @@
       "nombre": "Picada para 4 personas",
       "descripcion": "Pechuga 400 g, chatas 400 g a la plancha, ensalada, cuatro arepas, chorizo, papa a la francesa y salsas.",
       "precio": 66000,
-      "imagen": "assets/images/burger.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -631,7 +631,7 @@
       "nombre": "Carne de hamburguesa",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 8000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -641,7 +641,7 @@
       "nombre": "Jamón o queso",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 3000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -651,7 +651,7 @@
       "nombre": "Carne o pollo desmechado",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 7000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -661,7 +661,7 @@
       "nombre": "Tocineta",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 5000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -671,7 +671,7 @@
       "nombre": "Arepa x 3 con queso y salsa",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 4000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -681,7 +681,7 @@
       "nombre": "Chorizo",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 7000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -691,7 +691,7 @@
       "nombre": "Salchicha Americana Zenú",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 5000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -701,7 +701,7 @@
       "nombre": "Salchicha long Zenú",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 4000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -711,7 +711,7 @@
       "nombre": "Sobre de salsa adicional",
       "descripcion": "Adicional para acompañar tu pedido.",
       "precio": 1000,
-      "imagen": "assets/images/fries.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -721,7 +721,7 @@
       "nombre": "Jugo Hit PET 500 ml",
       "descripcion": "Bebida.",
       "precio": 4000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -731,7 +731,7 @@
       "nombre": "Jugo Hit litro",
       "descripcion": "Bebida.",
       "precio": 8000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -741,7 +741,7 @@
       "nombre": "Gaseosa personal",
       "descripcion": "Bebida.",
       "precio": 3500,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -751,7 +751,7 @@
       "nombre": "Gaseosa 1.5 litros",
       "descripcion": "Bebida.",
       "precio": 9000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -761,7 +761,7 @@
       "nombre": "Gaseosa mega 2.5 litros",
       "descripcion": "Bebida.",
       "precio": 12000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -771,7 +771,7 @@
       "nombre": "Gatorade",
       "descripcion": "Bebida.",
       "precio": 6000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -781,7 +781,7 @@
       "nombre": "Soda",
       "descripcion": "Bebida.",
       "precio": 5000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -791,7 +791,7 @@
       "nombre": "Agua personal",
       "descripcion": "Bebida.",
       "precio": 3000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -801,7 +801,7 @@
       "nombre": "PET 400 ml",
       "descripcion": "Bebida.",
       "precio": 4000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -811,7 +811,7 @@
       "nombre": "Cerveza",
       "descripcion": "Bebida.",
       "precio": 5000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -821,7 +821,7 @@
       "nombre": "Granizada de mandarina",
       "descripcion": "Granizada de mandarina.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -831,7 +831,7 @@
       "nombre": "Granizada de limón",
       "descripcion": "Granizada de limón.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -841,7 +841,7 @@
       "nombre": "Granizada de maracuyá",
       "descripcion": "Granizada de maracuyá.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -851,7 +851,7 @@
       "nombre": "Granizada de frutos rojos",
       "descripcion": "Granizada de frutos rojos.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -861,7 +861,7 @@
       "nombre": "Granizada de lulo",
       "descripcion": "Granizada de lulo.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -871,7 +871,7 @@
       "nombre": "Granizada de hierbabuena",
       "descripcion": "Granizada de hierbabuena.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -881,7 +881,7 @@
       "nombre": "Granizada de guanábana",
       "descripcion": "Granizada de guanábana.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -891,7 +891,7 @@
       "nombre": "Granizada de naranja",
       "descripcion": "Granizada de naranja.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -901,7 +901,7 @@
       "nombre": "Granizada de mora",
       "descripcion": "Granizada de mora.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -911,7 +911,7 @@
       "nombre": "Granizada de mango",
       "descripcion": "Granizada de mango.",
       "precio": 10000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -921,7 +921,7 @@
       "nombre": "Huevos con salchicha y arepa",
       "descripcion": "Huevos con salchicha y arepa.",
       "precio": 13500,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     },
@@ -931,7 +931,7 @@
       "nombre": "Chorizada (3 chorizos diferentes)",
       "descripcion": "Tres chorizos diferentes.",
       "precio": 27000,
-      "imagen": "assets/images/lemonade.svg",
+      "imagen": "assets/images/logo-cami.png",
       "disponible": true,
       "destacado": false
     }

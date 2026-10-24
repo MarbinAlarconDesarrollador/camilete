@@ -166,8 +166,8 @@
       };
       const productCard = (p) =>
         `<article class="product-card"><img src="${esc(p.imagen || "assets/images/burger.svg")}" alt="${esc(p.nombre)}" loading="lazy"><div class="product-info"><span class="eyebrow">${esc(categories.find((c) => c.id === p.categoriaId)?.nombre || "Favoritos")}</span><h3>${esc(p.nombre)}</h3><p>${esc(p.descripcion)}</p><div class="product-bottom"><strong>${money(p.precio)}</strong><button type="button" class="button small add-to-cart" data-add="${esc(p.id)}" ${p.disponible === false ? "disabled" : ""}>${p.disponible === false ? "Agotado" : "＋ Agregar al carrito"}</button></div></div></article>`;
-      const header = `<a class="skip-link" href="#contenido">Saltar al contenido principal</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>${esc(e.nombre || "CAMILETE")}<small>COMIDA CON ANTOJO</small></span></a><nav id="primary-navigation" aria-label="Navegación principal">${nav.map(([n, u]) => `<a href="${u}" ${file === u ? 'aria-current="page"' : ""}>${n}</a>`).join("")}</nav><div class="header-actions"><button class="icon-button" id="theme-toggle" aria-label="Cambiar tema">${theme === "claro" ? "☾" : "☀"}</button><a class="cart-link" href="carrito.html" aria-label="Carrito, ${cart().reduce((a, i) => a + i.qty, 0)} artículos">🛒 <span id="cart-count">${cart().reduce((a, i) => a + i.qty, 0)}</span></a><a class="button header-cta" href="menu.html">Pedir ahora <span>↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú"><span></span><span></span><span></span></button></div></div></header>`;
-      const footer = `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark">C</span><span>${esc(e.nombre || "CAMILETE")}<small>SABOR PARA COMPARTIR</small></span></a><p>${esc(e.descripcionCorta || "Comida rápida deliciosa en Piedecuesta.")}</p></div><div><h3>Encuéntranos</h3><p>${esc(e.direccion || e.ciudad || "Piedecuesta, Santander")}</p><p>${esc(e.horarioAtencion || "Consulta nuestros horarios")}</p><a href="${esc(waLink)}" target="_blank" rel="noopener">WhatsApp ↗</a></div><div><h3>Explora</h3>${nav.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div><div><h3>Información legal</h3>${legal.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div></div><div class="footer-bottom"><span>${esc(data.piePagina?.textoDerechos || "© 2026 CAMILETE")}</span><span>${esc(e.razonSocial || e.nombre || "CAMILETE")} ${e.nit ? `· NIT ${esc(e.nit)}` : ""} · ${esc(e.direccion || "Piedecuesta, Colombia")}</span><a href="admin/">Administración</a></div><div class="developer-credit"><span class="developer-credit-label">Diseño y desarrollo</span><span class="developer-credit-name">Marbin Alarcón</span><a href="tel:+573205578471" aria-label="Llamar a Marbin Alarcón al 320 557 8471">320 557 8471 <span aria-hidden="true">↗</span></a></div></footer><a class="whatsapp-float" href="${esc(waLink)}" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">☏</a><button id="access-toggle" class="access-toggle" aria-label="Abrir opciones de accesibilidad">♿</button><aside id="access-panel" class="access-panel" aria-label="Accesibilidad" hidden><h2>Accesibilidad</h2><button data-access="larger">Aumentar texto</button><button data-access="smaller">Reducir texto</button><button data-access="contrast">Alto contraste</button><button data-access="links">Resaltar enlaces</button><button data-access="read">Leer página</button><button data-access="reset">Restaurar ajustes</button></aside><div id="cart-toast" class="cart-toast" role="status" aria-live="polite" aria-atomic="true"></div>`;
+      const header = `<a class="skip-link" href="#contenido">Saltar al contenido principal</a><header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><img class="brand-mark" src="assets/icons/logogpt-2.png" alt="Logo de ${esc(e.nombre || "CAMILETE")}"><span>${esc(e.nombre || "CAMILETE")}<small>COMIDA CON ANTOJO</small></span></a><nav id="primary-navigation" aria-label="Navegación principal">${nav.map(([n, u]) => `<a href="${u}" ${file === u ? 'aria-current="page"' : ""}>${n}</a>`).join("")}</nav><div class="header-actions"><button class="icon-button" id="theme-toggle" aria-label="${theme === "claro" ? "Activar modo oscuro" : "Activar modo claro"}"><img src="assets/icons/${theme === "claro" ? "theme-moon" : "theme-sun"}.png" alt="" aria-hidden="true"></button><a class="cart-link" href="carrito.html" aria-label="Carrito, ${cart().reduce((a, i) => a + i.qty, 0)} artículos"><img src="assets/icons/cart.png" alt="" aria-hidden="true"><span id="cart-count">${cart().reduce((a, i) => a + i.qty, 0)}</span></a><a class="button header-cta" href="menu.html">Pedir ahora <span>↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Abrir menú"><span></span><span></span><span></span></button></div></div></header>`;
+      const footer = `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="index.html"><img class="brand-mark" src="assets/icons/logogpt-2.png" alt="Logo de ${esc(e.nombre || "CAMILETE")}"><span>${esc(e.nombre || "CAMILETE")}<small>SABOR PARA COMPARTIR</small></span></a><p>${esc(e.descripcionCorta || "Comida rápida deliciosa en Piedecuesta.")}</p></div><div><h3>Encuéntranos</h3><p>${esc(e.direccion || e.ciudad || "Piedecuesta, Santander")}</p><p>${esc(e.horarioAtencion || "Consulta nuestros horarios")}</p><a href="${esc(waLink)}" target="_blank" rel="noopener">WhatsApp ↗</a></div><div><h3>Explora</h3>${nav.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div><div><h3>Información legal</h3>${legal.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div></div><div class="footer-bottom"><span>${esc(data.piePagina?.textoDerechos || "© 2026 CAMILETE")}</span><span>${esc(e.razonSocial || e.nombre || "CAMILETE")} ${e.nit ? `· NIT ${esc(e.nit)}` : ""} · ${esc(e.direccion || "Piedecuesta, Colombia")}</span><a href="admin/">Administración</a></div><div class="developer-credit"><span class="developer-credit-label">Diseño y desarrollo</span><span class="developer-credit-name">Marbin Alarcón</span><a href="tel:+573205578471" aria-label="Llamar a Marbin Alarcón al 320 557 8471">320 557 8471 <span aria-hidden="true">↗</span></a></div></footer><a class="whatsapp-float" href="${esc(waLink)}" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"><img src="assets/icons/whatsapp.png" alt="" aria-hidden="true"></a><button id="access-toggle" class="access-toggle" aria-label="Abrir opciones de accesibilidad"><img src="assets/icons/accessibility.png" alt="" aria-hidden="true"></button><aside id="access-panel" class="access-panel" aria-label="Accesibilidad" hidden><h2>Accesibilidad</h2><button data-access="larger">Aumentar texto</button><button data-access="smaller">Reducir texto</button><button data-access="contrast">Alto contraste</button><button data-access="links">Resaltar enlaces</button><button data-access="read">Leer página</button><button data-access="reset">Restaurar ajustes</button></aside><div id="cart-toast" class="cart-toast" role="status" aria-live="polite" aria-atomic="true"></div>`;
       const productsSection = (items, filters = false) =>
         `${filters ? `<div class="filters"><button class="filter-chip active" data-category="all">Todo el menú</button>${categories.map((c) => `<button class="filter-chip" data-category="${c.id}">${esc(c.nombre)}</button>`).join("")}</div>` : ""}<div class="product-grid">${items.map(productCard).join("") || '<p class="empty-state">Pronto tendremos novedades en el menú.</p>'}</div>`;
       const home = `<main id="contenido"><section class="hero"><div class="hero-copy"><span class="eyebrow hero-eyebrow">Piedecuesta · HECHO CON ANTOJO</span><h1>El antojo tiene<br>un <em>nuevo favorito.</em></h1><p>${esc(e.eslogan || "Sabores que te encantan, al alcance de tu mano")}</p><div class="hero-actions"><a class="button" href="menu.html">Ver el menú <span>↗</span></a><a class="text-link" href="${esc(waLink)}" target="_blank" rel="noopener">Pide por WhatsApp <span>↗</span></a></div><div class="hero-note"><span class="stars">★★★★★</span><span>Sabor que siempre provoca</span></div></div><div class="hero-art"><div class="sun-shape"></div><img src="assets/images/burger.svg" alt="Hamburguesa CAMILETE recién preparada"><div class="art-sticker">PREPARADO<br>CON AMOR <span>♥</span></div><div class="art-caption">EL BUEN<br>ANTOJO.</div></div><div class="hero-index">01 <i></i> 03</div></section><section class="section featured-section"><div class="section-heading"><div><span class="eyebrow">HECHOS PARA DISFRUTAR</span><h2>Los que siempre <em>provocan.</em></h2></div><a class="text-link" href="menu.html">Ver todo el menú <span>↗</span></a></div>${productsSection(products.filter((p) => p.destacado).slice(0, 3))}</section><section class="menu-banner"><div><span class="eyebrow">TU PRÓXIMO FAVORITO TE ESPERA</span><h2>¿Antojo? Nosotros<br>nos encargamos.</h2><a class="button button-light" href="menu.html">Explorar menú <span>↗</span></a></div><div class="banner-illustration"><img src="assets/images/fries.svg" alt="Papas crocantes CAMILETE"></div><span class="banner-scribble">rico<br>rico<br>rico</span></section><section class="section about-strip"><span class="eyebrow">SOMOS CAMILETE</span><h2>Comida con sabor.<br><em>Momentos para recordar.</em></h2><p>${esc(e.descripcionLarga || e.descripcionCorta || "Sabor local, ingredientes frescos y muchas ganas de verte sonreír.")}</p><a class="text-link" href="nosotros.html">Conoce nuestra historia <span>↗</span></a></section></main>`;
@@ -237,7 +237,7 @@
       if (page === "menu")
         app.insertAdjacentHTML(
           "beforeend",
-          `<a class="cart-float" href="carrito.html">🛒 <span id="cart-float-count">${cart().reduce((a, i) => a + i.qty, 0)}</span> · Ver mi pedido <span>↗</span></a>`,
+          `<a class="cart-float" href="carrito.html"><img src="assets/icons/cart.png" alt="" aria-hidden="true"><span id="cart-float-count">${cart().reduce((a, i) => a + i.qty, 0)}</span> · Ver mi pedido <span>↗</span></a>`,
         );
       const updateCartCount = () => {
         const count = cart().reduce((a, i) => a + i.qty, 0);
@@ -268,7 +268,8 @@
             : "claro";
         applyTheme(next);
         const button = document.querySelector("#theme-toggle");
-        button.textContent = next === "claro" ? "☾" : "☀";
+        button.querySelector("img").src =
+          `assets/icons/${next === "claro" ? "theme-moon" : "theme-sun"}.png`;
         button.setAttribute(
           "aria-label",
           next === "claro" ? "Activar modo oscuro" : "Activar modo claro",
@@ -276,7 +277,8 @@
       });
       const mt = document.querySelector(".menu-toggle");
       const primaryNav = document.querySelector("#primary-navigation");
-      mt.innerHTML = '<span class="burger-icon" aria-hidden="true"><i class="burger-layer burger-bun-top"></i><i class="burger-layer burger-lettuce"></i><i class="burger-layer burger-cheese"></i><i class="burger-layer burger-patty"></i><i class="burger-layer burger-bun-bottom"></i></span>';
+      mt.innerHTML =
+        '<span class="burger-icon" aria-hidden="true"><i class="burger-layer burger-bun-top"></i><i class="burger-layer burger-lettuce"></i><i class="burger-layer burger-cheese"></i><i class="burger-layer burger-patty"></i><i class="burger-layer burger-bun-bottom"></i></span>';
       const navOverlay = document.createElement("button");
       navOverlay.className = "mobile-nav-overlay";
       navOverlay.type = "button";
@@ -299,15 +301,26 @@
         document.documentElement.classList.toggle("menu-open", open);
         if (open) {
           menuScrollY = window.scrollY;
-          for (const property of ["position", "top", "left", "right", "width"]) previousBodyStyle[property] = document.body.style[property];
-          Object.assign(document.body.style, { position: "fixed", top: `-${menuScrollY}px`, left: "0", right: "0", width: "100%" });
+          for (const property of ["position", "top", "left", "right", "width"])
+            previousBodyStyle[property] = document.body.style[property];
+          Object.assign(document.body.style, {
+            position: "fixed",
+            top: `-${menuScrollY}px`,
+            left: "0",
+            right: "0",
+            width: "100%",
+          });
           primaryNav.inert = false;
           primaryNav.setAttribute("aria-hidden", "false");
-          requestAnimationFrame(() => primaryNav.querySelector("a")?.focus({ preventScroll: true }));
+          requestAnimationFrame(() =>
+            primaryNav.querySelector("a")?.focus({ preventScroll: true }),
+          );
         } else {
-          for (const property of ["position", "top", "left", "right", "width"]) document.body.style[property] = previousBodyStyle[property] || "";
+          for (const property of ["position", "top", "left", "right", "width"])
+            document.body.style[property] = previousBodyStyle[property] || "";
           window.scrollTo(0, menuScrollY);
-          if (restoreFocus && mobileMenu.matches) mt.focus({ preventScroll: true });
+          if (restoreFocus && mobileMenu.matches)
+            mt.focus({ preventScroll: true });
         }
       };
       primaryNav.inert = mobileMenu.matches;
@@ -316,14 +329,17 @@
         setMenuOpen(mt.getAttribute("aria-expanded") !== "true");
       });
       navOverlay.addEventListener("click", () => setMenuOpen(false));
-      primaryNav.querySelectorAll("a").forEach((link) =>
-        link.addEventListener("click", () => setMenuOpen(false)),
-      );
+      primaryNav
+        .querySelectorAll("a")
+        .forEach((link) =>
+          link.addEventListener("click", () => setMenuOpen(false)),
+        );
       document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && menuOpen) setMenuOpen(false);
       });
       document.addEventListener("click", (event) => {
-        if (menuOpen && !event.target.closest(".site-header")) setMenuOpen(false);
+        if (menuOpen && !event.target.closest(".site-header"))
+          setMenuOpen(false);
       });
       mobileMenu.addEventListener("change", (event) => {
         if (!event.matches) setMenuOpen(false, false);

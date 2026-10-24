@@ -1,4 +1,4 @@
-const CACHE_NAME = 'camilete-shell-v9';
+const CACHE_NAME = 'camilete-shell-v10';
 const APP_FILES = [
   './', './index.html', './menu.html', './carrito.html', './nosotros.html',
   './ubicacion.html', './contacto.html', './politicas-privacidad.html',
@@ -9,6 +9,9 @@ const APP_FILES = [
   './js/data.js?v=9', './js/main.js?v=13', './js/seo.js?v=9', './js/pwa.js?v=1',
   './assets/icons/favicon.svg', './assets/icons/pwa-icon.svg',
   './assets/icons/pwa-192.png', './assets/icons/pwa-512.png',
+  './assets/icons/accessibility.png', './assets/icons/cart.png',
+  './assets/icons/theme-moon.png', './assets/icons/theme-sun.png',
+  './assets/icons/whatsapp.png', './assets/icons/logogpt-2.png',
   './assets/images/burger.svg', './assets/images/fries.svg',
   './assets/images/hotdog.svg', './assets/images/lemonade.svg'
 ];
