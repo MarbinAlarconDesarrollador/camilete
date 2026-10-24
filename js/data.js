@@ -19,7 +19,7 @@ window.CAMILETE_DEFAULT_DATA = {
     longitud: "",
     enlaceMapa:
       "https://maps.google.com/?q=CLL+9+%2313-70,+San+Antonio,+Piedecuesta",
-    redesSociales: { facebook: "", instagram: "", tiktok: "" },
+    redesSociales: { facebook: "", instagram: "", tiktok: "", youtube: "" },
     historia: "",
     mision: "",
     vision: "",

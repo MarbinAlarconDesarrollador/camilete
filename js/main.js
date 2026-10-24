@@ -58,8 +58,44 @@
         ["Devoluciones", "devoluciones-reembolsos.html"],
         ["Aviso legal", "aviso-legal.html"],
       ];
-      const e = data.empresa || {},
-        cfg = data.configuracion || {},
+      const e = data.empresa || {};
+      const socialNetworks = [
+        [
+          "facebook",
+          "Facebook",
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V13h2.8v8z"/></svg>',
+        ],
+        [
+          "instagram",
+          "Instagram",
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.8" r="1.2" fill="currentColor"/></svg>',
+        ],
+        [
+          "tiktok",
+          "TikTok",
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19.6 8.2a7 7 0 0 1-4.2-1.4v8.1a6.1 6.1 0 1 1-5.3-6.1v3.3a2.8 2.8 0 1 0 2 2.7V2.5h3.3a4 4 0 0 0 4.2 3.7z"/></svg>',
+        ],
+        [
+          "youtube",
+          "YouTube",
+          '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6z"/></svg>',
+        ],
+      ];
+      const socialLinks = socialNetworks
+        .map(([key, label, icon]) => {
+          const profile = String(e.redesSociales?.[key] || "").trim();
+          if (!profile) return "";
+          let url;
+          try {
+            url = new URL(profile);
+          } catch {
+            return "";
+          }
+          if (!["http:", "https:"].includes(url.protocol)) return "";
+          return `<a href="${esc(url.href)}" target="_blank" rel="noopener noreferrer" aria-label="${label} de ${esc(e.nombre || "CAMILETE")}" title="${label}">${icon}</a>`;
+        })
+        .join("");
+      const cfg = data.configuracion || {},
         categories = data.categorias || [],
         products = data.menu || [];
       const deliverySettings = cfg.domicilios || {},
@@ -234,6 +270,14 @@
         header +
         (page === "index" ? home : pageViews[page] || pageViews.error) +
         footer;
+      if (socialLinks) {
+        app
+          .querySelector(".footer-brand")
+          ?.parentElement.insertAdjacentHTML(
+            "beforeend",
+            `<h3 class="social-heading">Síguenos</h3><div class="social-links">${socialLinks}</div>`,
+          );
+      }
       if (page === "menu")
         app.insertAdjacentHTML(
           "beforeend",
