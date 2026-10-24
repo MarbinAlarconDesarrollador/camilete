@@ -601,6 +601,7 @@ html[data-theme="oscuro"] .developer-credit > a {
   transition:
     transform 0.2s,
     box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 .install-app-button img {
   display: block;
@@ -620,9 +621,145 @@ html[data-theme="oscuro"] .developer-credit > a {
 @media (max-width: 650px) {
   .install-app-button {
     left: 15px;
-    bottom: 84px;
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     width: 56px;
     height: 56px;
+  }
+}
+.install-modal {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgb(24 17 14 / 62%);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.install-modal[hidden],
+.install-steps[hidden] {
+  display: none;
+}
+.install-dialog {
+  position: relative;
+  width: min(100%, 410px);
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  padding: 30px 26px 24px;
+  border: 1px solid var(--borde, #eadfd5);
+  border-radius: 22px;
+  background: var(--fondo, #fffaf4);
+  color: var(--texto, #24211f);
+  text-align: center;
+  box-shadow: 0 24px 70px rgb(0 0 0 / 30%);
+  animation: install-dialog-in 0.22s ease-out both;
+}
+.install-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--textoSecundario, #655d58);
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.install-modal-logo {
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 12px;
+  border-radius: 18px;
+  object-fit: contain;
+}
+.install-modal-eyebrow {
+  margin: 0 0 7px;
+  color: var(--primario, #a91f2a);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.install-dialog h2 {
+  margin: 0 0 9px;
+  font-size: clamp(1.4rem, 6vw, 1.8rem);
+  line-height: 1.2;
+}
+.install-modal-description {
+  margin: 0;
+  color: var(--textoSecundario, #655d58);
+  font-size: 0.93rem;
+}
+.install-steps {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding-left: 25px;
+  color: var(--textoSecundario, #655d58);
+  font-size: 0.9rem;
+  text-align: left;
+}
+.install-steps li {
+  padding-left: 4px;
+}
+.install-steps strong {
+  color: var(--texto, #24211f);
+}
+.install-modal-actions {
+  display: grid;
+  gap: 9px;
+  margin-top: 22px;
+}
+.install-modal-actions button {
+  min-height: 46px;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.install-modal-primary {
+  border: 1px solid var(--boton, #a91f2a);
+  background: var(--boton, #a91f2a);
+  color: #fff;
+}
+.install-modal-primary:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+.install-modal-secondary {
+  border: 1px solid var(--borde, #eadfd5);
+  background: transparent;
+  color: var(--textoSecundario, #655d58);
+}
+.install-modal button:focus-visible {
+  outline: 3px solid var(--secundario, #ffc857);
+  outline-offset: 3px;
+}
+@keyframes install-dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .install-dialog {
+    animation: none;
+  }
+}
+@media (max-width: 650px) {
+  .install-modal {
+    padding: 14px;
+  }
+  .install-dialog {
+    max-height: calc(100dvh - 28px);
+    padding: 26px 20px 20px;
   }
 }
 .featured-section .product-grid {
