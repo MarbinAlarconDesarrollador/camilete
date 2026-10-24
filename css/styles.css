@@ -594,21 +594,64 @@ html[data-theme="oscuro"] .cart-link img,
 .filters {
   display: flex;
   flex-wrap: wrap;
-  gap: 9px;
+  gap: 6px;
+  max-width: 100%;
   margin-bottom: 26px;
+  padding: 7px;
+  overflow-x: auto;
+  border: 1px solid var(--borde, #eadfd5);
+  border-radius: 14px;
+  background: color-mix(
+    in srgb,
+    var(--borde, #eadfd5) 24%,
+    var(--fondo, #fffaf4)
+  );
+  scrollbar-width: thin;
+  scrollbar-color: var(--primario, #c72e38) transparent;
 }
 .filter-chip {
-  padding: 9px 15px;
-  border: 1px solid var(--borde);
-  border-radius: 30px;
+  min-height: 44px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
   background: transparent;
+  color: var(--textoSecundario, #655d58);
   cursor: pointer;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition:
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+.filter-chip:hover {
+  background: color-mix(
+    in srgb,
+    var(--primario, #c72e38) 10%,
+    var(--fondo, #fffaf4)
+  );
+  color: var(--primario, #c72e38);
+}
+.filter-chip:focus-visible {
+  outline: 3px solid color-mix(
+    in srgb,
+    var(--primario, #c72e38) 38%,
+    transparent
+  );
+  outline-offset: 2px;
 }
 .filter-chip.active {
-  background: var(--primario);
+  background: var(--boton, var(--primario, #c72e38));
   color: #fff;
-  border-color: var(--primario);
+  border-color: var(--boton, var(--primario, #c72e38));
+  box-shadow: 0 2px 7px color-mix(
+    in srgb,
+    var(--primario, #c72e38) 24%,
+    transparent
+  );
 }
 .story,
 .location-layout {

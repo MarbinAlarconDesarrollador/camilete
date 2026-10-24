@@ -98,15 +98,6 @@ html[data-theme="oscuro"] .value-list span {
   background: #343414;
   color: #f4f29a;
 }
-html[data-theme="oscuro"] .filter-chip {
-  color: var(--texto, #f6f4ed);
-  border-color: var(--borde, #393936);
-}
-html[data-theme="oscuro"] .filter-chip.active {
-  background: var(--primario);
-  color: #fff;
-  border-color: var(--primario);
-}
 html[data-theme="oscuro"] .text-input {
   background: #202020;
   border-color: var(--borde, #393936);
