@@ -95,8 +95,9 @@
     height: 22px;
   }
   .cart-link {
-    min-width: 40px;
+    width: 40px;
     min-height: 40px;
+    flex-basis: 40px;
     gap: 3px;
   }
   .hero {

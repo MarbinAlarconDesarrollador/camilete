@@ -1,4 +1,4 @@
-const CACHE_NAME = 'camilete-shell-v10';
+const CACHE_NAME = 'camilete-shell-v11';
 const APP_FILES = [
   './', './index.html', './menu.html', './carrito.html', './nosotros.html',
   './ubicacion.html', './contacto.html', './politicas-privacidad.html',
