@@ -8,13 +8,6 @@
   .header-cta {
     display: none;
   }
-  .hero {
-    min-height: 500px;
-    grid-template-columns: 1fr 1fr;
-  }
-  .hero-art {
-    height: 350px;
-  }
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -24,9 +17,6 @@
   .story,
   .location-layout {
     gap: 30px;
-  }
-  .sun-shape {
-    width: 90%;
   }
 }
 @media (max-width: 650px) {
@@ -100,37 +90,6 @@
     min-height: 40px;
     flex-basis: 40px;
     gap: 3px;
-  }
-  .hero {
-    padding: 45px 21px 70px;
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .hero h1 {
-    font-size: 3.65rem;
-  }
-  .hero-art {
-    height: 300px;
-    grid-row: 1;
-    margin-bottom: 4px;
-  }
-  .hero-art > img {
-    width: 78%;
-  }
-  .sun-shape {
-    width: 65%;
-    right: 18%;
-  }
-  .art-sticker {
-    width: 78px;
-    height: 78px;
-    font-size: 0.55rem;
-  }
-  .hero-note {
-    margin-top: 31px;
-  }
-  .hero-index {
-    left: 21px;
   }
   .section {
     padding: 58px 20px;

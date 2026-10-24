@@ -26,12 +26,6 @@ html[data-theme="oscuro"] .site-header {
   border-top: 4px solid transparent;
   border-image: linear-gradient(90deg, #edf000 0 70%, #ed3d32 70% 100%) 1;
 }
-html[data-theme="oscuro"] .sun-shape {
-  background: var(--secundario);
-}
-html[data-theme="oscuro"] .art-sticker {
-  border-color: var(--secundario);
-}
 .cart-float {
   position: fixed;
   z-index: 11;

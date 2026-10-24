@@ -184,18 +184,17 @@ nav a[aria-current="page"] {
   display: none;
 }
 .hero {
-  min-height: 550px;
   max-width: 1240px;
   margin: auto;
-  padding: 55px 32px 58px;
+  padding: 36px 21px;
   display: grid;
-  grid-template-columns: 1fr 1.05fr;
+  grid-template-columns: 1fr;
+  gap: 12px;
   position: relative;
   align-items: center;
 }
 .hero-copy {
-  padding: 8px 0 18px;
-  z-index: 1;
+  padding: 8px 0;
 }
 .eyebrow {
   font-size: 0.68rem;
@@ -217,6 +216,13 @@ p {
   letter-spacing: -0.065em;
   margin: 22px 0;
 }
+.hero h1 {
+  max-width: 12ch;
+  font-size: clamp(2.65rem, 11vw, 3.65rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  margin: 15px 0;
+}
 .hero h1 em,
 .section h2 em,
 .page-intro h1 em,
@@ -228,15 +234,16 @@ p {
   color: var(--primario);
 }
 .hero-copy > p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--textoSecundario);
-  max-width: 380px;
+  max-width: 440px;
 }
 .hero-actions {
   display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-top: 27px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 17px;
+  margin-top: 21px;
 }
 .text-link {
   font-weight: 700;
@@ -249,83 +256,50 @@ p {
   margin-left: 8px;
 }
 .hero-note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 52px;
+  margin: 18px 0 0;
   color: var(--textoSecundario);
   font-size: 0.76rem;
 }
-.stars {
-  color: #e9a929;
-  letter-spacing: 0.16em;
-}
 .hero-art {
-  height: 420px;
-  position: relative;
-  display: grid;
-  place-items: center;
+  width: 100%;
+  aspect-ratio: 540 / 620;
 }
-.hero-art > img {
-  position: relative;
-  width: 86%;
-  z-index: 1;
-  filter: drop-shadow(0 25px 22px #3d20152e);
-  transform: rotate(-7deg);
+.hero-art picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.sun-shape {
-  position: absolute;
-  width: min(400px, 80%);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--secundario);
-  right: 7%;
-  top: 3%;
-  opacity: 0.9;
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.art-sticker {
-  position: absolute;
-  z-index: 2;
-  right: 2%;
-  top: 7%;
-  border: 1px solid var(--texto);
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  font-weight: 900;
-  font-size: 0.65rem;
-  line-height: 1.2;
-  transform: rotate(12deg);
-  background: var(--fondo);
-}
-.art-sticker span {
-  color: var(--primario);
-}
-.art-caption {
-  position: absolute;
-  bottom: 8px;
-  right: 9%;
-  font: 900 1.6rem/1 Georgia;
-  color: var(--primario);
-  transform: rotate(-7deg);
-}
-.hero-index {
-  position: absolute;
-  bottom: 20px;
-  left: 32px;
-  font-size: 0.72rem;
-  color: var(--textoSecundario);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.hero-index i {
-  width: 50px;
-  height: 1px;
-  background: var(--primario);
+@media (min-width: 900px) {
+  .hero {
+    min-height: 550px;
+    padding: 55px 32px 58px;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 32px;
+  }
+  .hero h1 {
+    font-size: clamp(2.75rem, 5.2vw, 4.8rem);
+  }
+  .hero-copy > p {
+    font-size: 1.1rem;
+  }
+  .hero-actions {
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 27px;
+  }
+  .hero-note {
+    margin-top: 30px;
+  }
+  .hero-art {
+    aspect-ratio: 640 / 440;
+  }
 }
 .section {
   max-width: 1240px;
