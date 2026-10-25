@@ -1,4 +1,4 @@
-const CACHE_NAME = "camilete-v22";
+const CACHE_NAME = "camilete-v23";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -16,11 +16,11 @@ const APP_FILES = [
   "./offline.html",
   "./manifest.webmanifest",
   "./data.json",
-  "./css/styles.css?v=13",
+  "./css/styles.css?v=14",
   "./css/temas.css?v=22",
-  "./css/responsive.css?v=13",
+  "./css/responsive.css?v=14",
   "./js/data.js?v=11",
-  "./js/main.js?v=17",
+  "./js/main.js?v=18",
   "./js/seo.js?v=9",
   "./js/pwa.js?v=2",
   "./assets/icons/favicon.svg",

@@ -33,6 +33,25 @@
     const value = readStorage("camilete-data");
     return value?.version === 2 ? value : null;
   })();
+  const pageFile = location.pathname.split("/").pop() || "index.html";
+  const appRoot = document.querySelector("#app");
+  if (pageFile === "menu.html" && appRoot) {
+    try {
+      const preferredTheme = localStorage.getItem("camilete-theme");
+      if (preferredTheme === "claro" || preferredTheme === "oscuro")
+        document.documentElement.dataset.theme = preferredTheme;
+    } catch {}
+    const filterSkeleton = Array.from(
+      { length: 10 },
+      () => '<span class="skeleton-filter" aria-hidden="true"></span>',
+    ).join("");
+    const productSkeleton = Array.from(
+      { length: 6 },
+      () =>
+        '<article class="skeleton-product" aria-hidden="true"><span class="skeleton-product-image"></span><div class="skeleton-product-content"><span class="skeleton-line skeleton-category"></span><span class="skeleton-line skeleton-title"></span><span class="skeleton-line"></span><span class="skeleton-line skeleton-description"></span><div class="skeleton-product-footer"><span class="skeleton-line skeleton-price"></span><span class="skeleton-line skeleton-button"></span></div></div></article>',
+    ).join("");
+    appRoot.innerHTML = `<main id="contenido" class="skeleton-menu" aria-busy="true"><p class="skeleton-announcement" role="status">Cargando el menú…</p><section class="page-intro" aria-hidden="true"><span class="skeleton-line skeleton-eyebrow"></span><span class="skeleton-line skeleton-heading"></span><span class="skeleton-line skeleton-heading-short"></span><span class="skeleton-line skeleton-intro"></span></section><section class="section menu-list" aria-hidden="true"><div class="skeleton-filters">${filterSkeleton}</div><div class="skeleton-products">${productSkeleton}</div></section></main>`;
+  }
   fetch("data.json")
     .then((r) => {
       if (!r.ok) throw new Error("data");
