@@ -196,7 +196,7 @@
           instructions: item.instructions || "",
         }));
       };
-      const additions = products.filter((p) => p.categoriaId === 5);
+      const additions = products.filter((p) => p.categoriaId === 6);
       const addProduct = (id, button) => {
         const items = cart(),
           productId = Number(id),

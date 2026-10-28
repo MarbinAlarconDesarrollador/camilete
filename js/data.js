@@ -6,7 +6,7 @@ window.CAMILETE_DEFAULT_DATA = {
       "Comidas rápidas en Piedecuesta. Pide hamburguesas, perros, papas y más.",
     descripcionLarga:
       "Hamburguesas, perros calientes, papas, carnes, bebidas y más para disfrutar en Piedecuesta.",
-    nit: "",
+    nit: "91.508.661-1",
     razonSocial: "CAMILETE",
     direccion: "CLL 9 #13-70, San Antonio, Piedecuesta",
     ciudad: "Piedecuesta, Santander",
@@ -15,11 +15,11 @@ window.CAMILETE_DEFAULT_DATA = {
     whatsapp: "573138700644",
     correo: "",
     horarioAtencion: "Consulta disponibilidad y horarios por WhatsApp",
-    latitud: "",
-    longitud: "",
+    latitud: "6.9883022",
+    longitud: "-73.1234567",
     enlaceMapa:
-      "https://maps.google.com/?q=CLL+9+%2313-70,+San+Antonio,+Piedecuesta",
-    redesSociales: { facebook: "", instagram: "", tiktok: "", youtube: "" },
+      "https://www.google.com/maps/place/Cl+9+%23+13-70,+Piedecuesta,+Santander/@6.9883022,-73.0477885,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6847ac0db61cf9:0x4ab6407406a41394!8m2!3d6.9882969!4d-73.0452136!16s%2Fg%2F11x05mcm_1?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
+    redesSociales: { facebook: "https://www.facebook.com/share/1K5EdjQTnM/", instagram: "https://www.instagram.com/comidas_rapidas_camilete?dlrf=ZXU1aWI0OWM5eDd3", tiktok: "", youtube: "" },
     historia: "",
     mision: "",
     vision: "",
@@ -87,28 +87,40 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 4,
-      nombre: "Carnes y picadas",
-      descripcion: "Carnes a la plancha y picadas para compartir.",
+      nombre: "Carnes y pechugas",
+      descripcion: "Carnes y pechugas a la plancha.",
       imagen: "assets/images/category-carnes.svg",
     },
     {
       id: 5,
-      nombre: "Adicionales",
-      descripcion: "Añade algo más a tu pedido.",
+      nombre: "Picadas",
+      descripcion: "Picadas para compartir.",
       imagen: "assets/images/category-adicionales.svg",
     },
     {
       id: 6,
-      nombre: "Bebidas",
-      descripcion: "Bebidas frías para acompañar.",
+      nombre: "Adicionales",
+      descripcion: "Añade algo más a tu pedido.",
       imagen: "assets/images/lemonade.svg",
     },
     {
       id: 7,
-      nombre: "Granizadas y especiales",
-      descripcion: "Granizadas, huevos con salchicha y chorizada.",
+      nombre: "Bebidas",
+      descripcion: "Bebidas frías para acompañar.",
       imagen: "assets/images/category-granizadas.svg",
     },
+    {
+      id: 8,
+      nombre: "Granizadas",
+      descripcion: "Granizadas de distintos sabores.",
+      imagen: "assets/images/category-granizadas.svg",
+    },
+    {
+      id: 9,
+      nombre: "Especiales",
+      descripcion: "Especiales de distintos sabores.",
+      imagen: "assets/images/category-especiales.svg",
+    }
   ],
   menu: [
     {
@@ -637,7 +649,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 49,
-      categoriaId: 4,
+      categoriaId: 5,
       nombre: "Picada para 2 personas",
       descripcion:
         "Media pechuga, media chata a la plancha, ensalada, dos arepas, chorizo, papa a la francesa y salsas.",
@@ -648,7 +660,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 50,
-      categoriaId: 4,
+      categoriaId: 5,
       nombre: "Picada para 4 personas",
       descripcion:
         "Pechuga 400 g, chatas 400 g a la plancha, ensalada, cuatro arepas, chorizo, papa a la francesa y salsas.",
@@ -659,7 +671,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 51,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Carne de hamburguesa",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 8000,
@@ -669,7 +681,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 52,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Jamón o queso",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 3000,
@@ -679,7 +691,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 53,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Carne o pollo desmechado",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 7000,
@@ -689,7 +701,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 54,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Tocineta",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 5000,
@@ -699,7 +711,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 55,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Arepa x 3 con queso y salsa",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 4000,
@@ -709,7 +721,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 56,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Chorizo",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 7000,
@@ -719,7 +731,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 57,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Salchicha Americana Zenú",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 5000,
@@ -729,7 +741,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 58,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Salchicha long Zenú",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 4000,
@@ -739,7 +751,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 59,
-      categoriaId: 5,
+      categoriaId: 6,
       nombre: "Sobre de salsa adicional",
       descripcion: "Adicional para acompañar tu pedido.",
       precio: 1000,
@@ -749,7 +761,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 60,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Jugo Hit PET 500 ml",
       descripcion: "Bebida.",
       precio: 4000,
@@ -759,7 +771,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 61,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Jugo Hit litro",
       descripcion: "Bebida.",
       precio: 8000,
@@ -769,7 +781,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 62,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Gaseosa personal",
       descripcion: "Bebida.",
       precio: 3500,
@@ -779,7 +791,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 63,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Gaseosa 1.5 litros",
       descripcion: "Bebida.",
       precio: 9000,
@@ -789,7 +801,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 64,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Gaseosa mega 2.5 litros",
       descripcion: "Bebida.",
       precio: 12000,
@@ -799,7 +811,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 65,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Gatorade",
       descripcion: "Bebida.",
       precio: 6000,
@@ -809,7 +821,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 66,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Soda",
       descripcion: "Bebida.",
       precio: 5000,
@@ -819,7 +831,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 67,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Agua personal",
       descripcion: "Bebida.",
       precio: 3000,
@@ -829,7 +841,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 68,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "PET 400 ml",
       descripcion: "Bebida.",
       precio: 4000,
@@ -839,7 +851,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 69,
-      categoriaId: 6,
+      categoriaId: 7,
       nombre: "Cerveza",
       descripcion: "Bebida.",
       precio: 5000,
@@ -849,7 +861,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 70,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de mandarina",
       descripcion: "Granizada de mandarina.",
       precio: 10000,
@@ -859,7 +871,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 71,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de limón",
       descripcion: "Granizada de limón.",
       precio: 10000,
@@ -869,7 +881,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 72,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de maracuyá",
       descripcion: "Granizada de maracuyá.",
       precio: 10000,
@@ -879,7 +891,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 73,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de frutos rojos",
       descripcion: "Granizada de frutos rojos.",
       precio: 10000,
@@ -889,7 +901,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 74,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de lulo",
       descripcion: "Granizada de lulo.",
       precio: 10000,
@@ -899,7 +911,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 75,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de hierbabuena",
       descripcion: "Granizada de hierbabuena.",
       precio: 10000,
@@ -909,7 +921,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 76,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de guanábana",
       descripcion: "Granizada de guanábana.",
       precio: 10000,
@@ -919,7 +931,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 77,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de naranja",
       descripcion: "Granizada de naranja.",
       precio: 10000,
@@ -929,7 +941,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 78,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de mora",
       descripcion: "Granizada de mora.",
       precio: 10000,
@@ -939,7 +951,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 79,
-      categoriaId: 7,
+      categoriaId: 8,
       nombre: "Granizada de mango",
       descripcion: "Granizada de mango.",
       precio: 10000,
@@ -949,7 +961,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 80,
-      categoriaId: 7,
+      categoriaId: 9,
       nombre: "Huevos con salchicha y arepa",
       descripcion: "Huevos con salchicha y arepa.",
       precio: 13500,
@@ -959,7 +971,7 @@ window.CAMILETE_DEFAULT_DATA = {
     },
     {
       id: 81,
-      categoriaId: 7,
+      categoriaId: 9,
       nombre: "Chorizada (3 chorizos diferentes)",
       descripcion: "Tres chorizos diferentes.",
       precio: 27000,
@@ -989,5 +1001,5 @@ window.CAMILETE_DEFAULT_DATA = {
     textoCumplimiento:
       "Tratamos tus datos de acuerdo con la Ley 1581 de 2012 y las normas colombianas aplicables.",
   },
-  version: 2,
+  version: 3,
 };
