@@ -307,6 +307,7 @@ html[data-theme="oscuro"] .site-header {
     display: block;
     width: 32px;
     height: 32px;
+    transition: filter 0.38s ease;
   }
   .burger-layer {
     position: absolute;
@@ -358,77 +359,149 @@ html[data-theme="oscuro"] .site-header {
     background: linear-gradient(180deg, #f4bf69, #d99039);
     box-shadow: inset 0 -2px #c87c2f;
   }
+
+  /* ============================================================
+     ESTADO ABIERTO: la hamburguesa se convierte en cuchillo + tenedor
+     ============================================================ */
   .menu-toggle[aria-expanded="true"] .burger-lettuce,
   .menu-toggle[aria-expanded="true"] .burger-cheese,
   .menu-toggle[aria-expanded="true"] .burger-patty {
     opacity: 0;
     transform: scaleX(0.35);
   }
-  .menu-toggle[aria-expanded="true"] .burger-bun-top,
-  .menu-toggle[aria-expanded="true"] .burger-bun-bottom {
-    top: 14px;
-    left: 2px;
-    width: 28px;
-    height: 4px;
-    border-radius: 3px;
-    background: linear-gradient(180deg, #f8fafc, #aeb8c2 48%, #727e8a);
-    box-shadow: 0 1px 2px #303844;
-    clip-path: polygon(0 50%, 14% 0, 100% 0, 100% 100%, 14% 100%);
+
+  /* La sombra va en el contenedor porque clip-path recortaría
+     cualquier sombra puesta directamente en los cubiertos. */
+  .menu-toggle[aria-expanded="true"] .burger-icon {
+    filter: drop-shadow(0 1px 1px rgb(30 36 46 / 45%));
   }
+
+  /* ---------- CUCHILLO (diagonal 45°) ----------
+     Mango de madera a la izquierda, ensanche metálico y hoja
+     con lomo recto y filo curvo que termina en punta. */
   .menu-toggle[aria-expanded="true"] .burger-bun-top {
+    top: 12px;
+    left: 1px;
+    width: 30px;
+    height: 8px;
+    border-radius: 0;
+    box-shadow: none;
+    background:
+      linear-gradient(180deg, #a87449, #6a4026 55%, #4a2a18) 0 0 / 36% 100%
+        no-repeat,
+      linear-gradient(180deg, #ffffff, #cfd6dd 40%, #8d99a5 85%, #6f7b87);
+    clip-path: polygon(
+      0 32%,
+      3% 16%,
+      8% 10%,
+      35% 10%,
+      35% 0,
+      78% 0,
+      94% 34%,
+      100% 62%,
+      93% 80%,
+      35% 80%,
+      35% 90%,
+      8% 90%,
+      3% 84%,
+      0 68%
+    );
     transform: rotate(45deg);
   }
+  /* Remaches del mango */
+  .menu-toggle[aria-expanded="true"] .burger-bun-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    background:
+      radial-gradient(circle at 26% 50%, #e9edf1 0 0.9px, transparent 1.2px),
+      radial-gradient(circle at 70% 50%, #e9edf1 0 0.9px, transparent 1.2px);
+  }
+  /* Brillo a lo largo de la hoja */
   .menu-toggle[aria-expanded="true"] .burger-bun-top::after {
     content: "";
     position: absolute;
-    top: -1px;
-    right: -8px;
-    width: 10px;
-    height: 6px;
-    border-radius: 2px 4px 4px 2px;
-    background: linear-gradient(90deg, #606b76, #cbd2d9 45%, #77828d);
-    box-shadow: 0 1px 2px #303844;
+    top: 16%;
+    left: 40%;
+    width: 48%;
+    height: 1px;
+    border-radius: 1px;
+    background: rgb(255 255 255 / 90%);
   }
+
+  /* ---------- TENEDOR (diagonal -45°) ----------
+     Mango redondeado, cuello que se ensancha y cabeza
+     con 4 púas separadas. */
   .menu-toggle[aria-expanded="true"] .burger-bun-bottom {
+    top: 11px;
+    left: 1px;
+    width: 30px;
+    height: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    background: linear-gradient(
+      180deg,
+      #ffffff,
+      #cfd6dd 40%,
+      #8d99a5 80%,
+      #6f7b87
+    );
+    clip-path: polygon(
+      0 42%,
+      2% 32%,
+      6% 30%,
+      40% 30%,
+      54% 40%,
+      68% 0,
+      100% 0,
+      100% 16%,
+      82% 16%,
+      82% 28%,
+      100% 28%,
+      100% 44%,
+      82% 44%,
+      82% 56%,
+      100% 56%,
+      100% 72%,
+      82% 72%,
+      82% 84%,
+      100% 84%,
+      100% 100%,
+      68% 100%,
+      54% 60%,
+      40% 70%,
+      6% 70%,
+      2% 68%,
+      0 58%
+    );
     transform: rotate(-45deg);
-    clip-path: none;
-    border-radius: 3px;
   }
+  /* Brillo del mango */
   .menu-toggle[aria-expanded="true"] .burger-bun-bottom::before {
     content: "";
     position: absolute;
-    left: -2px;
-    top: -6px;
-    width: 11px;
-    height: 8px;
-    background: linear-gradient(#dce2e8, #7f8994);
-    clip-path: polygon(
-      0 0,
-      100% 0,
-      100% 100%,
-      82% 100%,
-      82% 38%,
-      65% 38%,
-      65% 100%,
-      47% 100%,
-      47% 38%,
-      30% 38%,
-      30% 100%,
-      13% 100%,
-      13% 38%,
-      0 38%
-    );
+    top: 36%;
+    left: 6%;
+    width: 33%;
+    height: 1px;
+    border-radius: 1px;
+    background: rgb(255 255 255 / 90%);
   }
+  /* Brillo en la base de la cabeza */
   .menu-toggle[aria-expanded="true"] .burger-bun-bottom::after {
     content: "";
     position: absolute;
-    right: -4px;
-    top: -1px;
-    width: 7px;
-    height: 6px;
-    border-radius: 2px 4px 4px 2px;
-    background: linear-gradient(90deg, #65717c, #cbd2d9, #77828d);
+    top: 10%;
+    left: 66%;
+    width: 14%;
+    height: 1px;
+    border-radius: 1px;
+    background: rgb(255 255 255 / 80%);
   }
+
   html[data-theme="oscuro"] .menu-toggle {
     border-color: #4a4943;
     background: #242424;

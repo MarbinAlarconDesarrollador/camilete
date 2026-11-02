@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440"><rect width="640" height="440" fill="#f6e5cb"/><ellipse cx="318" cy="350" rx="235" ry="26" fill="#7c4522" opacity=".12"/><g transform="rotate(-12 320 220)"><path d="M98 258c-34-43-8-103 51-111l346-45c50-7 91 28 83 73-7 39-36 75-76 84l-341 70c-34 7-53-29-63-71" fill="#e9a556" stroke="#b96a35" stroke-width="8"/><path d="M112 240c-10-31 12-54 45-61l322-42c33-4 57 7 63 28l-29 55-358 76z" fill="#bf4530"/><path d="M127 227q35-29 69 1t68-1t68 1t68-1t68 1t62-2" fill="none" stroke="#f7cf50" stroke-width="15" stroke-linecap="round"/><path d="M137 253q40-28 79 0t80 0t80 0t80 0t66-3" fill="none" stroke="#f3e7d1" stroke-width="12" stroke-linecap="round"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <g transform="rotate(-12 256 256)" stroke-linejoin="round" stroke-linecap="round">
+    <g stroke="#2B2D42" stroke-width="8">
+      <!-- Back bun -->
+      <rect x="68" y="150" width="376" height="200" rx="90" fill="#F4A63A"/>
+      <!-- Sausage -->
+      <rect x="40" y="185" width="432" height="90" rx="45" fill="#D6453D"/>
+    </g>
+    <!-- Mustard zigzag (outline then fill) -->
+    <polyline points="96,203 124,224 152,203 180,224 208,203 236,224 264,203 292,224 320,203 348,224 376,203 404,224" fill="none" stroke="#2B2D42" stroke-width="22"/>
+    <polyline points="96,203 124,224 152,203 180,224 208,203 236,224 264,203 292,224 320,203 348,224 376,203 404,224" fill="none" stroke="#FFD500" stroke-width="10"/>
+    <!-- Front bun -->
+    <rect x="68" y="240" width="376" height="120" rx="60" fill="#F4A63A" stroke="#2B2D42" stroke-width="8"/>
+  </g>
+</svg>

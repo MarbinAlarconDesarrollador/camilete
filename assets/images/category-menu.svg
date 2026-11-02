@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Cover -->
+  <rect x="44" y="92" width="424" height="336" rx="24" fill="#E94B3C" stroke="#2B2D42" stroke-width="10" stroke-linejoin="round"/>
+  <!-- Pages -->
+  <rect x="68" y="114" width="188" height="292" rx="10" fill="#FFF1C9" stroke="#2B2D42" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="256" y="114" width="188" height="292" rx="10" fill="#FFF1C9" stroke="#2B2D42" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Spine -->
+  <line x1="256" y1="114" x2="256" y2="406" stroke="#2B2D42" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Left page: plate + item bars -->
+  <circle cx="162" cy="196" r="46" fill="#2EC4B6" stroke="#2B2D42" stroke-width="8"/>
+  <circle cx="162" cy="196" r="24" fill="#FFF1C9" stroke="#2B2D42" stroke-width="6"/>
+  <rect x="106" y="268" width="112" height="16" rx="8" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="106" y="304" width="84" height="16" rx="8" fill="#2EC4B6" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="106" y="340" width="112" height="16" rx="8" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+
+  <!-- Right page: chef's hat -->
+  <g stroke="#2B2D42" stroke-width="8" stroke-linejoin="round">
+    <circle cx="322" cy="190" r="28" fill="#FFFFFF"/>
+    <circle cx="350" cy="168" r="34" fill="#FFFFFF"/>
+    <circle cx="378" cy="190" r="28" fill="#FFFFFF"/>
+    <rect x="312" y="196" width="76" height="52" rx="6" fill="#FFFFFF"/>
+  </g>
+  <!-- cover internal outlines -->
+  <circle cx="322" cy="190" r="24" fill="#FFFFFF"/>
+  <circle cx="350" cy="168" r="30" fill="#FFFFFF"/>
+  <circle cx="378" cy="190" r="24" fill="#FFFFFF"/>
+  <rect x="316" y="196" width="68" height="44" fill="#FFFFFF"/>
+  <rect x="312" y="236" width="76" height="26" rx="6" fill="#FFC93C" stroke="#2B2D42" stroke-width="8" stroke-linejoin="round"/>
+
+  <!-- Right page: item bars -->
+  <rect x="294" y="304" width="112" height="16" rx="8" fill="#2EC4B6" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="294" y="340" width="84" height="16" rx="8" fill="#FF9F1C" stroke="#2B2D42" stroke-width="5"/>
+  <rect x="294" y="372" width="112" height="16" rx="8" fill="#2EC4B6" stroke="#2B2D42" stroke-width="5"/>
+</svg>

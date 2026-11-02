@@ -1,4 +1,4 @@
-const CACHE_NAME = "camilete-v26";
+const CACHE_NAME = "camilete-v28";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -14,15 +14,16 @@ const APP_FILES = [
   "./aviso-legal.html",
   "./error.html",
   "./offline.html",
+  "./404.html",
   "./manifest.webmanifest",
   "./data.json",
-  "./css/styles.css?v=14",
-  "./css/temas.css?v=23",
-  "./css/responsive.css?v=14",
-  "./js/data.js?v=11",
-  "./js/main.js?v=20",
-  "./js/seo.js?v=9",
-  "./js/pwa.js?v=2",
+  "./css/styles.css",
+  "./css/temas.css",
+  "./css/responsive.css",
+  "./js/data.js",
+  "./js/main.js",
+  "./js/seo.js",
+  "./js/pwa.js",
   "./assets/icons/favicon.svg",
   "./assets/icons/pwa-icon.svg",
   "./assets/icons/pwa-192.png",
@@ -60,7 +61,7 @@ self.addEventListener("activate", (event) => {
         Promise.all(
           keys
             .filter(
-              (key) => key.startsWith("camilete-shell-") && key !== CACHE_NAME,
+              (key) => key.startsWith("camilete-") && key !== CACHE_NAME,
             )
             .map((key) => caches.delete(key)),
         ),

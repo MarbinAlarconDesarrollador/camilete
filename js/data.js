@@ -6,7 +6,7 @@ window.CAMILETE_DEFAULT_DATA = {
       "Comidas rápidas en Piedecuesta. Pide hamburguesas, perros, papas y más.",
     descripcionLarga:
       "Hamburguesas, perros calientes, papas, carnes, bebidas y más para disfrutar en Piedecuesta.",
-    nit: "91.508.661-1",
+    nit: "",
     razonSocial: "CAMILETE",
     direccion: "CLL 9 #13-70, San Antonio, Piedecuesta",
     ciudad: "Piedecuesta, Santander",
@@ -14,15 +14,29 @@ window.CAMILETE_DEFAULT_DATA = {
     telefono: "313 870 0644 · 316 265 6214 · 318 001 9538",
     whatsapp: "573138700644",
     correo: "",
-    horarioAtencion: "Consulta disponibilidad y horarios por WhatsApp",
-    latitud: "6.9883022",
-    longitud: "-73.1234567",
+    horarioAtencion: "Lunes a Domingo · 5:00 p. m. a 11:55 p. m.",
+    latitud: "",
+    longitud: "",
     enlaceMapa:
-      "https://www.google.com/maps/place/Cl+9+%23+13-70,+Piedecuesta,+Santander/@6.9883022,-73.0477885,17z/data=!3m1!4b1!4m6!3m5!1s0x8e6847ac0db61cf9:0x4ab6407406a41394!8m2!3d6.9882969!4d-73.0452136!16s%2Fg%2F11x05mcm_1?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D",
-    redesSociales: { facebook: "https://www.facebook.com/share/1K5EdjQTnM/", instagram: "https://www.instagram.com/comidas_rapidas_camilete?dlrf=ZXU1aWI0OWM5eDd3", tiktok: "", youtube: "" },
-    historia: "",
-    mision: "",
-    vision: "",
+      "https://maps.google.com/?q=CLL+9+%2313-70,+San+Antonio,+Piedecuesta",
+    redesSociales: { facebook: "", instagram: "", tiktok: "", youtube: "" },
+    historia: `Todo comenzó en 2006, con un sueño, muchas ganas de salir adelante y una gran pasión por la comida.
+
+CAMILETE nació como una propuesta gastronómica en el mundo de las comidas rápidas. Pero nuestra historia comenzó mucho antes de abrir las puertas de nuestro primer restaurante.
+
+Nuestros primeros pasos estuvieron detrás de un servicio de mensajería, trabajando en restaurantes reconocidos como JIMMY y MANOLETE. Fue precisamente en MANOLETE donde recibimos ese impulso y motivación que nos animó a dar el gran paso: crear nuestro propio restaurante.
+
+Así comenzó esta aventura. Con esfuerzo, dedicación y el deseo de ofrecer algo rico, hemos recorrido diferentes sectores de Piedecuesta, construyendo poco a poco nuestra historia y ganándonos un lugar en el corazón de nuestros clientes.
+
+Hoy continuamos nuestra trayectoria en el barrio San Antonio de Piedecuesta, con la misma ilusión de aquellos primeros días y el compromiso de preparar comidas rápidas que provoquen volver.
+
+Han pasado los años, hemos aprendido, crecido y evolucionado, pero hay algo que nunca ha cambiado: nuestras ganas de ofrecer comida deliciosa y atender a nuestros clientes con cercanía y cariño.
+
+Nuestro lema: «No somos los mejores, pero la comida es muy rica».
+
+Gracias por acompañarnos desde 2006 y por permitirnos seguir siendo parte de sus momentos, sus antojos y sus historias. ¡Bienvenidos a CAMILETE!`,
+    mision: "En CAMILETE tenemos como misión ofrecer experiencias deliciosas a través de comidas rápidas preparadas con dedicación, calidad y buen sabor, brindando a nuestros clientes una atención cercana, amable y oportuna. Trabajamos cada día con pasión y compromiso para satisfacer los antojos de nuestros clientes, manteniendo nuestra esencia, mejorando continuamente y construyendo relaciones de confianza con las familias y la comunidad de Piedecuesta.",
+    vision: "Para el año 2030, CAMILETE busca consolidarse como uno de los restaurantes de comidas rápidas más reconocidos y queridos de Piedecuesta, siendo referente por el sabor de sus productos, la calidad de su servicio y la confianza de sus clientes. Queremos seguir creciendo, innovando en nuestro menú y mejorando nuestros procesos, sin perder la esencia que nos ha acompañado desde 2006: el trabajo honesto, la dedicación y el compromiso de ofrecer comida rica a quienes nos eligen.",
     valores: [],
     whatsappSecundarios: ["573162656214", "573180019538"],
     mediosPago: ["Nequi · 316 265 6214"],
@@ -83,42 +97,42 @@ window.CAMILETE_DEFAULT_DATA = {
       id: 3,
       nombre: "Papas",
       descripcion: "Salchipapas, mazorcadas y papas para compartir.",
-      imagen: "assets/images/fries.svg",
+      imagen: "assets/images/papas-fritas.webp",
     },
     {
       id: 4,
       nombre: "Carnes y pechugas",
       descripcion: "Carnes y pechugas a la plancha.",
-      imagen: "assets/images/category-carnes.svg",
+      imagen: "assets/images/pechuga.webp",
     },
     {
       id: 5,
       nombre: "Picadas",
       descripcion: "Picadas para compartir.",
-      imagen: "assets/images/category-adicionales.svg",
+      imagen: "assets/images/picada.webp",
     },
     {
       id: 6,
       nombre: "Adicionales",
       descripcion: "Añade algo más a tu pedido.",
-      imagen: "assets/images/lemonade.svg",
+      imagen: "assets/images/chorizo.webp",
     },
     {
       id: 7,
       nombre: "Bebidas",
       descripcion: "Bebidas frías para acompañar.",
-      imagen: "assets/images/category-granizadas.svg",
+      imagen: "assets/images/bebidas.webp",
     },
     {
       id: 8,
       nombre: "Granizadas",
       descripcion: "Granizadas de distintos sabores.",
-      imagen: "assets/images/category-granizadas.svg",
+      imagen: "assets/images/granizadas.svg",
     },
     {
       id: 9,
       nombre: "Especiales",
-      descripcion: "Especiales de distintos sabores.",
+      descripcion: "Opciones especiales para compartir.",
       imagen: "assets/images/category-especiales.svg",
     }
   ],
@@ -1001,5 +1015,5 @@ window.CAMILETE_DEFAULT_DATA = {
     textoCumplimiento:
       "Tratamos tus datos de acuerdo con la Ley 1581 de 2012 y las normas colombianas aplicables.",
   },
-  version: 3,
+  version: 2,
 };

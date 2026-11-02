@@ -1,1 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440"><defs><linearGradient id="bun" x2="0" y2="1"><stop stop-color="#ffd27c"/><stop offset="1" stop-color="#de8438"/></linearGradient><linearGradient id="meat" x2="0" y2="1"><stop stop-color="#75402a"/><stop offset="1" stop-color="#3d211b"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#54321e" flood-opacity=".22"/></filter></defs><ellipse cx="323" cy="379" rx="235" ry="25" fill="#713b1c" opacity=".12"/><g filter="url(#s)" transform="rotate(-6 320 220)"><path d="M108 204c0-91 92-147 211-147s211 56 211 147z" fill="url(#bun)" stroke="#bd6c2e" stroke-width="8"/><g fill="#fff1c9"><ellipse cx="250" cy="105" rx="8" ry="4" transform="rotate(28 250 105)"/><ellipse cx="318" cy="82" rx="8" ry="4" transform="rotate(-20 318 82)"/><ellipse cx="390" cy="105" rx="8" ry="4" transform="rotate(28 390 105)"/><ellipse cx="207" cy="145" rx="8" ry="4"/><ellipse cx="360" cy="134" rx="8" ry="4"/></g><path d="M111 210q34-38 70 0t72 0t72 0t72 0t72 0t61 0v25H111z" fill="#4c8c43"/><path d="M112 228l42-22 51 23 49-25 54 24 51-25 58 25 47-22 64 22-29 34H133z" fill="#f4bb35"/><path d="M113 248q42-20 81 0t79 0t80 0t80 0t80 0t58 0l-10 51H124z" fill="url(#meat)" stroke="#4b271e" stroke-width="7"/><path d="M120 294q40-26 80 0t80 0t80 0t80 0t80 0t54 0l-9 27H128z" fill="#f5b834"/><path d="M128 316h382c-13 55-92 76-192 76s-177-21-190-76" fill="url(#bun)" stroke="#bd6c2e" stroke-width="8"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <g stroke="#2B2D42" stroke-width="8" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Bottom bun -->
+    <path d="M96 372 H416 V398 Q416 440 372 440 H140 Q96 440 96 398 Z" fill="#F4A63A"/>
+    <!-- Patty -->
+    <rect x="92" y="324" width="328" height="52" rx="26" fill="#7B4B2A"/>
+    <!-- Cheese with melting drips -->
+    <path d="M100 298 H412 V320 H352 Q342 320 340 336 L336 350 Q328 366 320 350 L314 332 Q312 320 300 320 H236 Q226 320 224 336 L222 358 Q214 374 206 358 L202 334 Q200 320 188 320 H100 Z" fill="#FFC93C"/>
+    <!-- Tomato -->
+    <rect x="106" y="266" width="300" height="40" rx="14" fill="#E63946"/>
+    <!-- Lettuce -->
+    <path d="M92 240 H420 V258 Q400 294 376 266 Q352 298 328 268 Q304 298 280 268 Q256 298 232 268 Q208 298 184 268 Q160 298 136 268 Q112 294 92 258 Z" fill="#5CB85C"/>
+    <!-- Top bun -->
+    <path d="M92 242 C92 142 168 92 256 92 C344 92 420 142 420 242 Z" fill="#F4A63A"/>
+  </g>
+  <!-- Sesame seeds -->
+  <g fill="#FFF1C9">
+    <ellipse cx="204" cy="150" rx="12" ry="7" transform="rotate(-25 204 150)"/>
+    <ellipse cx="262" cy="128" rx="12" ry="7"/>
+    <ellipse cx="320" cy="152" rx="12" ry="7" transform="rotate(25 320 152)"/>
+    <ellipse cx="160" cy="204" rx="12" ry="7" transform="rotate(-40 160 204)"/>
+    <ellipse cx="256" cy="186" rx="12" ry="7" transform="rotate(10 256 186)"/>
+    <ellipse cx="354" cy="206" rx="12" ry="7" transform="rotate(40 354 206)"/>
+  </g>
+</svg>
