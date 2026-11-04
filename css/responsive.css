@@ -548,3 +548,9 @@
     justify-content: center;
   }
 }
+@media (max-width: 899px) {
+  .product-card.no-image {
+    display: flex;
+    grid-template-columns: none;
+  }
+}

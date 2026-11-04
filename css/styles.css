@@ -1949,3 +1949,27 @@ html[data-theme="oscuro"] .location-map {
   text-decoration-thickness: 2px !important;
   text-underline-offset: 3px !important;
 }
+/* Productos con imagen */
+.product-card.has-image > img {
+  display: block;
+  width: 100%;
+  height: 215px;
+  object-fit: cover;
+  background: #f6ebdf;
+}
+
+/* Productos sin imagen */
+.product-card.no-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-card.no-image .product-info {
+  padding: 24px;
+}
+
+/* Evitar espacios innecesarios */
+.product-card.no-image .product-info p {
+  min-height: auto;
+}
