@@ -171,7 +171,7 @@
       "nombre": "Carne Pollo sin papa",
       "descripcion": "Pan, cebolla, tomate, arepa, pollo desmechado, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 19000,
-      "imagen": "",
+      "imagen": "assets/images/carne-pollo.jpeg",
       "disponible": true,
       "destacado": true
     },
@@ -181,7 +181,7 @@
       "nombre": "Carne Pollo con papa",
       "descripcion": "Pan, cebolla, tomate, arepa, pollo desmechado, carne, queso, papa a la francesa, salsas y queso rallado.",
       "precio": 22000,
-      "imagen": "",
+      "imagen": "assets/images/carne-pollo-con-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -251,7 +251,7 @@
       "nombre": "La Criolla sin papa",
       "descripcion": "Pan, cebolla, tomate, filete de pechuga, carne, queso, jamón, tocineta, chorizo, papa a la francesa, salsas y queso rallado.",
       "precio": 23000,
-      "imagen": "",
+      "imagen": "assets/images/criolla.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -271,7 +271,7 @@
       "nombre": "Super sin papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, dos carnes, dos quesos, dos jamones, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 26000,
-      "imagen": "",
+      "imagen": "assets/images/super-especial-sin-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -281,7 +281,7 @@
       "nombre": "Super con papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, dos carnes, dos quesos, dos jamones, tocineta, papa a la francesa, salsas y queso rallado.",
       "precio": 29000,
-      "imagen": "",
+      "imagen": "assets/images/super-especial-con-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -291,7 +291,7 @@
       "nombre": "Camilete sin papa",
       "descripcion": "Pan, cebolla, tomate, pollo desmechado, arepa, carne, queso, jamón, tocineta, filete de pechuga, carne desmechada, papa a la francesa, salsas y queso rallado.",
       "precio": 31000,
-      "imagen": "",
+      "imagen": "assets/images/camilete-sin-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -341,7 +341,7 @@
       "nombre": "Perro especial con papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla, papa ripio, pollo desmechado, queso fundido, papa a la francesa, salsas y queso rallado.",
       "precio": 19000,
-      "imagen": "",
+      "imagen": "assets/images/perro-especial-con-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -371,7 +371,7 @@
       "nombre": "Perro Loco sin papa",
       "descripcion": "Pan, salchicha Americana Zenú, cebolla, pollo desmechado, carne desmechada, dos quesos fundidos, papa a la francesa, salsas y queso rallado.",
       "precio": 27000,
-      "imagen": "",
+      "imagen": "assets/images/perro-loco-sin-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -421,7 +421,7 @@
       "nombre": "Perro Campesino con papa",
       "descripcion": "Pan, salchicha long Zenú, cebolla grillé, papa ripio, pollo desmechado, maíz, queso fundido, chorizo Zenú, papa a la francesa, salsas y queso rallado.",
       "precio": 25000,
-      "imagen": "",
+      "imagen": "assets/images/perro-campesino-con-papa.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -491,7 +491,7 @@
       "nombre": "Chori papa especial pequeño",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, chorizo Zenú y queso rallado.",
       "precio": 19000,
-      "imagen": "",
+      "imagen": "assets/images/chori-especial.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -501,7 +501,7 @@
       "nombre": "Chori papa especial grande",
       "descripcion": "Papa a la francesa, salsas, cebolla grillé, papa ripio, pollo desmechado, chorizo Zenú y queso rallado.",
       "precio": 28000,
-      "imagen": "",
+      "imagen": "assets/images/chori-especial.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -591,7 +591,7 @@
       "nombre": "Media chata 200 g",
       "descripcion": "Chata a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
       "precio": 20000,
-      "imagen": "",
+      "imagen": "assets/images/media-chata.jpeg",
       "disponible": true,
       "destacado": false
     },
@@ -611,7 +611,7 @@
       "nombre": "Media pechuga 200 g",
       "descripcion": "Pechuga a la plancha, ensalada, arepa, papa a la francesa, salsas y queso rallado.",
       "precio": 17000,
-      "imagen": "",
+      "imagen": "assets/images/media-pechuga.jpeg",
       "disponible": true,
       "destacado": false
     },
