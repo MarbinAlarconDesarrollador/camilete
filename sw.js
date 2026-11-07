@@ -1,4 +1,4 @@
-const CACHE_NAME = "camilete-v32";
+const CACHE_NAME = "camilete-v33";
 const APP_FILES = [
   "./",
   "./index.html",
