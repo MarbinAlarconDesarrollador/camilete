@@ -240,10 +240,11 @@
         }
       };
       const productCard = (p) => {
-        const imagen = p.imagen && p.imagen.trim()
-          ? `<img src="${esc(p.imagen.trim())}" alt="${esc(p.nombre)}" loading="lazy">`
-          : "";
-          return `
+        const imagen =
+          p.imagen && p.imagen.trim()
+            ? `<img src="${esc(p.imagen.trim())}" alt="${esc(p.nombre)}" loading="lazy">`
+            : "";
+        return `
         <article class="product-card ${imagen ? "has-image" : "no-image"}"> ${imagen}
               <div class="product-info">
                 <span class="eyebrow">${esc(categories.find((c) => c.id === p.categoriaId)?.nombre || "Favoritos")}</span>
@@ -252,7 +253,7 @@
                 <div class="product-bottom">
                   <strong>${money(p.precio)}</strong>
                   <button type="button" class="button small add-to-cart" data-add="${esc(p.id)}" ${p.disponible === false ? "disabled" : ""}>
-                    ${p.disponible === false ? "Agotado" : "＋ Agregar al carrito"  }
+                    ${p.disponible === false ? "Agotado" : "＋ Agregar al carrito"}
                   </button>
                 </div>
               </div>
@@ -264,7 +265,7 @@
       const footer = `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="index.html"><img class="brand-mark" src="assets/icons/logogpt-2.png" alt="Logo de ${esc(e.nombre || "CAMILETE")}"><span>${esc(e.nombre || "CAMILETE")}<small>SABOR PARA COMPARTIR</small></span></a><p>${esc(e.descripcionCorta || "Comida rápida deliciosa en Piedecuesta.")}</p></div><div><h3>Encuéntranos</h3><p>${esc(e.direccion || e.ciudad || "Piedecuesta, Santander")}</p><p>${esc(e.horarioAtencion || "Lunes a Domingo · 5:00 p. m. a 11:55 p. m.")}</p><a href="${esc(waLink)}" target="_blank" rel="noopener">WhatsApp ↗</a></div><div><h3>Explora</h3>${nav.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div><div><h3>Información legal</h3>${legal.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div></div><div class="footer-bottom"><span>${esc(data.piePagina?.textoDerechos || "© 2026 CAMILETE")}</span><span>${esc(e.razonSocial || e.nombre || "CAMILETE")} ${e.nit ? `· NIT ${esc(e.nit)}` : ""} · ${esc(e.direccion || "Piedecuesta, Colombia")}</span><a href="admin/">Administración</a></div><div class="developer-credit"><span class="developer-credit-label">Diseño y desarrollo</span><span class="developer-credit-name">Marbin Alarcón</span><a href="tel:+573205578471" aria-label="Llamar a Marbin Alarcón al 320 557 8471">320 557 8471 <span aria-hidden="true">↗</span></a></div></footer><a class="whatsapp-float" href="${esc(waLink)}" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"><img src="assets/icons/whatsapp.png" alt="" aria-hidden="true"></a><button id="access-toggle" class="access-toggle" aria-label="Abrir opciones de accesibilidad"><img src="assets/icons/accessibility.png" alt="" aria-hidden="true"></button><aside id="access-panel" class="access-panel" aria-label="Accesibilidad" hidden><h2>Accesibilidad</h2><button data-access="larger">Aumentar texto</button><button data-access="smaller">Reducir texto</button><button data-access="contrast">Alto contraste</button><button data-access="links">Resaltar enlaces</button><button data-access="read">Leer página</button><button data-access="reset">Restaurar ajustes</button></aside><div id="cart-toast" class="cart-toast" role="status" aria-live="polite" aria-atomic="true"></div>`;
       const productsSection = (items, filters = false) =>
         `${filters ? `<div class="filters" role="group" aria-label="Filtrar productos por categoría"><button type="button" class="filter-chip active" data-category="all" aria-pressed="true"><span class="filter-chip-image"><img src="assets/images/category-menu.svg" alt="" aria-hidden="true" loading="lazy"></span><span class="filter-chip-name">Todo el menú</span></button>${categories.map((c) => `<button type="button" class="filter-chip" data-category="${esc(c.id)}" aria-pressed="false"><span class="filter-chip-image"><img src="${esc(c.imagen || "assets/images/logo-cami.webp")}" alt="" aria-hidden="true" loading="lazy"></span><span class="filter-chip-name">${esc(c.nombre)}</span></button>`).join("")}</div>` : ""}<div class="product-grid">${items.map(productCard).join("") || '<p class="empty-state">Pronto tendremos novedades en el menú.</p>'}</div>`;
-      const home = `<section class="section promos-section" aria-labelledby="promos-title"><div class="section-heading"><div><span class="eyebrow">OFERTAS ESPECIALES</span><h2 id="promos-title">Promos.</h2></div></div><a class="promos-card" href="menu.html${tableQuery}" aria-label="Ver promociones y pedir granizadas"><img src="assets/images/promo-granizadas.jpeg" alt="Promoción de granizadas de CAMILETE" width="1215" height="1600" loading="lazy"></a></section><section class="section featured-section"><div class="section-heading"><div><span class="eyebrow">HECHOS PARA DISFRUTAR</span><h2>Los que siempre <em>provocan.</em></h2></div><a class="text-link" href="menu.html">Ver todo el menú <span>↗</span></a></div>${productsSection(products.filter((p) => p.destacado).slice(0, 3))}</section><section class="menu-banner">
+      const home = `<section class="section promos-section" aria-labelledby="promos-title"><div class="section-heading"><div><span class="eyebrow">OFERTAS ESPECIALES</span><h2 id="promos-title">Promos.</h2></div></div><a class="promos-card" href="menu.html${tableQuery}" aria-label="Ver promociones y pedir granizadas"><img src="assets/images/promocion-granizadas.jpeg" alt="Promoción de granizadas de CAMILETE" width="1215" height="1600" loading="lazy"></a></section><section class="section featured-section"><div class="section-heading"><div><span class="eyebrow">HECHOS PARA DISFRUTAR</span><h2>Los que siempre <em>provocan.</em></h2></div><a class="text-link" href="menu.html">Ver todo el menú <span>↗</span></a></div>${productsSection(products.filter((p) => p.destacado).slice(0, 3))}</section><section class="menu-banner">
   <div class="banner-copy">
     <span class="eyebrow">TU PRÓXIMO FAVORITO TE ESPERA</span>
     <h2>¿Antojo? Nosotros<br><em>nos encargamos.</em></h2>
@@ -723,9 +724,7 @@
                   item.preferences.sauces ? "con salsas" : "sin salsas",
                   item.preferences.onion ? "con cebolla" : "sin cebolla",
                   item.instructions ? `indicaciones: ${item.instructions}` : "",
-                  tableId && item.recipient
-                    ? `para: ${item.recipient}`
-                    : "",
+                  tableId && item.recipient ? `para: ${item.recipient}` : "",
                   tableId && item.observations
                     ? `observaciones: ${item.observations}`
                     : "",
