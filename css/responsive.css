@@ -60,6 +60,28 @@
   }
 }
 @media (max-width: 650px) {
+  .text-link {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
+  }
+  .hero .text-link {
+    min-height: 36px;
+    padding: 4px 0 5px;
+  }
+  .section-heading .text-link {
+    align-self: flex-start;
+  }
+  .promos-section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+  .promos-section .section-heading {
+    margin-bottom: 18px;
+  }
+  .promos-card {
+    border-radius: 14px;
+  }
   .site-header {
     height: 70px;
   }

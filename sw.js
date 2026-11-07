@@ -1,4 +1,4 @@
-const CACHE_NAME = "camilete-v29";
+const CACHE_NAME = "camilete-v32";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -44,6 +44,7 @@ const APP_FILES = [
   "./assets/images/fries.svg",
   "./assets/images/hotdog.svg",
   "./assets/images/lemonade.svg",
+  "./assets/images/promo-granizadas.jpeg",
 ];
 
 self.addEventListener("install", (event) => {

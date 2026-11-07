@@ -195,9 +195,13 @@
           },
           extras: Array.isArray(item.extras) ? item.extras.map(Number) : [],
           instructions: item.instructions || "",
+          recipient: item.recipient || "",
+          observations: item.observations || "",
         }));
       };
       const additions = products.filter((p) => p.categoriaId === 6);
+      const allowsExtras = (product) =>
+        product && [1, 2, 3, 4, 5].includes(Number(product.categoriaId));
       const addProduct = (id, button) => {
         const items = cart(),
           productId = Number(id),
@@ -207,7 +211,9 @@
               i.preferences.sauces &&
               i.preferences.onion &&
               !i.extras.length &&
-              !i.instructions,
+              !i.instructions &&
+              !i.recipient &&
+              !i.observations,
           );
         if (entry) entry.qty++;
         else
@@ -218,6 +224,8 @@
             preferences: { sauces: true, onion: true },
             extras: [],
             instructions: "",
+            recipient: "",
+            observations: "",
           });
         writeStorage("camilete-cart", items);
         updateCartCount();
@@ -256,7 +264,7 @@
       const footer = `<footer class="site-footer"><div class="footer-main"><div><a class="brand footer-brand" href="index.html"><img class="brand-mark" src="assets/icons/logogpt-2.png" alt="Logo de ${esc(e.nombre || "CAMILETE")}"><span>${esc(e.nombre || "CAMILETE")}<small>SABOR PARA COMPARTIR</small></span></a><p>${esc(e.descripcionCorta || "Comida rápida deliciosa en Piedecuesta.")}</p></div><div><h3>Encuéntranos</h3><p>${esc(e.direccion || e.ciudad || "Piedecuesta, Santander")}</p><p>${esc(e.horarioAtencion || "Lunes a Domingo · 5:00 p. m. a 11:55 p. m.")}</p><a href="${esc(waLink)}" target="_blank" rel="noopener">WhatsApp ↗</a></div><div><h3>Explora</h3>${nav.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div><div><h3>Información legal</h3>${legal.map(([n, u]) => `<a href="${u}">${n}</a>`).join("")}</div></div><div class="footer-bottom"><span>${esc(data.piePagina?.textoDerechos || "© 2026 CAMILETE")}</span><span>${esc(e.razonSocial || e.nombre || "CAMILETE")} ${e.nit ? `· NIT ${esc(e.nit)}` : ""} · ${esc(e.direccion || "Piedecuesta, Colombia")}</span><a href="admin/">Administración</a></div><div class="developer-credit"><span class="developer-credit-label">Diseño y desarrollo</span><span class="developer-credit-name">Marbin Alarcón</span><a href="tel:+573205578471" aria-label="Llamar a Marbin Alarcón al 320 557 8471">320 557 8471 <span aria-hidden="true">↗</span></a></div></footer><a class="whatsapp-float" href="${esc(waLink)}" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp"><img src="assets/icons/whatsapp.png" alt="" aria-hidden="true"></a><button id="access-toggle" class="access-toggle" aria-label="Abrir opciones de accesibilidad"><img src="assets/icons/accessibility.png" alt="" aria-hidden="true"></button><aside id="access-panel" class="access-panel" aria-label="Accesibilidad" hidden><h2>Accesibilidad</h2><button data-access="larger">Aumentar texto</button><button data-access="smaller">Reducir texto</button><button data-access="contrast">Alto contraste</button><button data-access="links">Resaltar enlaces</button><button data-access="read">Leer página</button><button data-access="reset">Restaurar ajustes</button></aside><div id="cart-toast" class="cart-toast" role="status" aria-live="polite" aria-atomic="true"></div>`;
       const productsSection = (items, filters = false) =>
         `${filters ? `<div class="filters" role="group" aria-label="Filtrar productos por categoría"><button type="button" class="filter-chip active" data-category="all" aria-pressed="true"><span class="filter-chip-image"><img src="assets/images/category-menu.svg" alt="" aria-hidden="true" loading="lazy"></span><span class="filter-chip-name">Todo el menú</span></button>${categories.map((c) => `<button type="button" class="filter-chip" data-category="${esc(c.id)}" aria-pressed="false"><span class="filter-chip-image"><img src="${esc(c.imagen || "assets/images/logo-cami.webp")}" alt="" aria-hidden="true" loading="lazy"></span><span class="filter-chip-name">${esc(c.nombre)}</span></button>`).join("")}</div>` : ""}<div class="product-grid">${items.map(productCard).join("") || '<p class="empty-state">Pronto tendremos novedades en el menú.</p>'}</div>`;
-      const home = `<section class="section featured-section"><div class="section-heading"><div><span class="eyebrow">HECHOS PARA DISFRUTAR</span><h2>Los que siempre <em>provocan.</em></h2></div><a class="text-link" href="menu.html">Ver todo el menú <span>↗</span></a></div>${productsSection(products.filter((p) => p.destacado).slice(0, 3))}</section><section class="menu-banner">
+      const home = `<section class="section promos-section" aria-labelledby="promos-title"><div class="section-heading"><div><span class="eyebrow">OFERTAS ESPECIALES</span><h2 id="promos-title">Promos.</h2></div></div><a class="promos-card" href="menu.html${tableQuery}" aria-label="Ver promociones y pedir granizadas"><img src="assets/images/promo-granizadas.jpeg" alt="Promoción de granizadas de CAMILETE" width="1215" height="1600" loading="lazy"></a></section><section class="section featured-section"><div class="section-heading"><div><span class="eyebrow">HECHOS PARA DISFRUTAR</span><h2>Los que siempre <em>provocan.</em></h2></div><a class="text-link" href="menu.html">Ver todo el menú <span>↗</span></a></div>${productsSection(products.filter((p) => p.destacado).slice(0, 3))}</section><section class="menu-banner">
   <div class="banner-copy">
     <span class="eyebrow">TU PRÓXIMO FAVORITO TE ESPERA</span>
     <h2>¿Antojo? Nosotros<br><em>nos encargamos.</em></h2>
@@ -273,7 +281,7 @@
   <span class="banner-scribble" aria-hidden="true">rico<br>rico<br>rico</span>
 </section><section class="section about-strip"><span class="eyebrow">SOMOS CAMILETE</span><h2>Comida con sabor.<br><em>Momentos para recordar.</em></h2><p>${esc(e.descripcionLarga || e.descripcionCorta || "Sabor local, ingredientes frescos y muchas ganas de verte sonreír.")}</p><a class="text-link" href="nosotros.html">Conoce nuestra historia <span>↗</span></a></section>`;
       const pageViews = {
-        menu: `<main id="contenido"><section class="page-intro"><span class="eyebrow">TODO LO BUENO, EN UN SOLO LUGAR</span><h1>El menú que<br><em>tenías en mente.</em></h1><p>Elige tu antojo. Nosotros lo preparamos con todo el sabor.</p></section><section class="section menu-list">${productsSection(
+        menu: `<main id="contenido"><section class="page-intro"><span class="eyebrow">TODO LO BUENO, EN UN SOLO LUGAR</span><h1>El menú que tenías en mente.</em></h1><p>Elige tu antojo. Nosotros lo preparamos con todo el sabor.</p></section><section class="section menu-list">${productsSection(
           products.filter((p) => p.disponible !== false),
           true,
         )}</section></main>`,
@@ -498,11 +506,13 @@
         const getLineTotal = (item) => {
           const product = products.find((p) => p.id === item.id);
           if (!product) return 0;
-          const extraCost = item.extras.reduce(
-            (sum, id) =>
-              sum + (additions.find((x) => x.id === id)?.precio || 0),
-            0,
-          );
+          const extraCost = allowsExtras(product)
+            ? item.extras.reduce(
+                (sum, id) =>
+                  sum + (additions.find((x) => x.id === id)?.precio || 0),
+                0,
+              )
+            : 0;
           return (Number(product.precio) + extraCost) * item.qty;
         };
         const lineSelector = (lineId) =>
@@ -575,7 +585,13 @@
             ? items
                 .map((item) => {
                   const product = products.find((p) => p.id === item.id);
-                  return `<article class="cart-row" data-cart-row="${esc(item.lineId)}"><img class="cart-product-image" src="${esc(product.imagen || "assets/images/logo-cami.webp")}" alt="${esc(product.nombre)}"><div class="cart-item-main"><div class="cart-item-heading"><div><h2>${esc(product.nombre)}</h2><span>${money(product.precio)} por unidad</span></div><button type="button" class="remove-item" data-remove="${esc(item.lineId)}" aria-label="Eliminar ${esc(product.nombre)} del carrito">×</button></div><div class="cart-options"><span class="options-title">Personaliza tu producto</span><label class="choice-chip"><input type="checkbox" data-pref="sauces" data-line="${esc(item.lineId)}" ${item.preferences.sauces ? "checked" : ""}> Lleva salsas</label><label class="choice-chip"><input type="checkbox" data-pref="onion" data-line="${esc(item.lineId)}" ${item.preferences.onion ? "checked" : ""}> Lleva cebolla</label><label class="instructions-label">Otros cambios (por ejemplo: sin tomate)<input class="text-input" type="text" data-instructions="true" data-line="${esc(item.lineId)}" value="${esc(item.instructions)}" placeholder="Escribe aquí tus indicaciones"></label><details class="extras-picker"><summary>Agregar adicionales de la carta</summary><div class="extras-grid">${additions.map((extra) => `<label class="extra-option"><input type="checkbox" data-extra="${extra.id}" data-line="${esc(item.lineId)}" ${item.extras.includes(extra.id) ? "checked" : ""}><span>${esc(extra.nombre)}</span><strong>+ ${money(extra.precio)}</strong></label>`).join("")}</div><small>El adicional seleccionado se cobra por cada unidad de este producto.</small></details></div><div class="cart-item-bottom"><div class="qty-control"><button type="button" data-qty="${esc(item.lineId)}" data-change="-1" aria-label="Reducir cantidad de ${esc(product.nombre)}">−</button><span>${item.qty}</span><button type="button" data-qty="${esc(item.lineId)}" data-change="1" aria-label="Aumentar cantidad de ${esc(product.nombre)}">+</button></div><strong class="line-total">${money(getLineTotal(item))}</strong></div></div></article>`;
+                  const extrasPicker = allowsExtras(product)
+                    ? `<details class="extras-picker"><summary>Agregar adicionales de la carta</summary><div class="extras-grid">${additions.map((extra) => `<label class="extra-option"><input type="checkbox" data-extra="${extra.id}" data-line="${esc(item.lineId)}" ${item.extras.includes(extra.id) ? "checked" : ""}><span>${esc(extra.nombre)}</span><strong>+ ${money(extra.precio)}</strong></label>`).join("")}</div><small>El adicional seleccionado se cobra por cada unidad de este producto.</small></details>`
+                    : "";
+                  const tableFields = tableId
+                    ? `<label class="instructions-label">¿Para quién es este producto?<input class="text-input" type="text" data-recipient="true" data-line="${esc(item.lineId)}" value="${esc(item.recipient)}" placeholder="Ej.: Ana, María, Juan"></label><label class="instructions-label">Observaciones del producto<input class="text-input" type="text" data-observations="true" data-line="${esc(item.lineId)}" value="${esc(item.observations)}" placeholder="Ej.: sin cebolla, término medio"></label>`
+                    : "";
+                  return `<article class="cart-row" data-cart-row="${esc(item.lineId)}"><img class="cart-product-image" src="${esc(product.imagen || "assets/images/logo-cami.webp")}" alt="${esc(product.nombre)}"><div class="cart-item-main"><div class="cart-item-heading"><div><h2>${esc(product.nombre)}</h2><span>${money(product.precio)} por unidad</span></div><button type="button" class="remove-item" data-remove="${esc(item.lineId)}" aria-label="Eliminar ${esc(product.nombre)} del carrito">×</button></div><div class="cart-options"><span class="options-title">Personaliza tu producto</span><label class="choice-chip"><input type="checkbox" data-pref="sauces" data-line="${esc(item.lineId)}" ${item.preferences.sauces ? "checked" : ""}> Lleva salsas</label><label class="choice-chip"><input type="checkbox" data-pref="onion" data-line="${esc(item.lineId)}" ${item.preferences.onion ? "checked" : ""}> Lleva cebolla</label><label class="instructions-label">Otros cambios (por ejemplo: sin tomate)<input class="text-input" type="text" data-instructions="true" data-line="${esc(item.lineId)}" value="${esc(item.instructions)}" placeholder="Escribe aquí tus indicaciones"></label>${extrasPicker}${tableFields}</div><div class="cart-item-bottom"><div class="qty-control"><button type="button" data-qty="${esc(item.lineId)}" data-change="-1" aria-label="Reducir cantidad de ${esc(product.nombre)}">−</button><span>${item.qty}</span><button type="button" data-qty="${esc(item.lineId)}" data-change="1" aria-label="Aumentar cantidad de ${esc(product.nombre)}">+</button></div><strong class="line-total">${money(getLineTotal(item))}</strong></div></div></article>`;
                 })
                 .join("")
             : `<p class="empty-state">Tu carrito está esperando algo rico. <a href="menu.html${tableQuery}">Explora el menú.</a></p>`;
@@ -630,13 +646,21 @@
           }
           if (target.dataset.instructions !== undefined)
             item.instructions = target.value;
+          if (target.dataset.recipient !== undefined)
+            item.recipient = target.value;
+          if (target.dataset.observations !== undefined)
+            item.observations = target.value;
           writeStorage("camilete-cart", items);
           paintCart();
           const selector = target.dataset.pref
             ? `[data-pref="${target.dataset.pref}"]`
             : target.dataset.extra
               ? `[data-extra="${target.dataset.extra}"]`
-              : "[data-instructions]";
+              : target.dataset.recipient !== undefined
+                ? "[data-recipient]"
+                : target.dataset.observations !== undefined
+                  ? "[data-observations]"
+                  : "[data-instructions]";
           container
             .querySelector(`${lineSelector(lineId)} ${selector}`)
             ?.focus({ preventScroll: true });
@@ -699,7 +723,13 @@
                   item.preferences.sauces ? "con salsas" : "sin salsas",
                   item.preferences.onion ? "con cebolla" : "sin cebolla",
                   item.instructions ? `indicaciones: ${item.instructions}` : "",
-                  item.extras.length
+                  tableId && item.recipient
+                    ? `para: ${item.recipient}`
+                    : "",
+                  tableId && item.observations
+                    ? `observaciones: ${item.observations}`
+                    : "",
+                  allowsExtras(product) && item.extras.length
                     ? `adicionales: ${item.extras
                         .map((id) => {
                           const extra = additions.find((x) => x.id === id);

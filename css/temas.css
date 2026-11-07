@@ -22,6 +22,15 @@ html[data-theme="oscuro"] .site-header {
 html[data-theme="oscuro"] .icon-button {
   color: var(--texto);
 }
+html[data-theme="oscuro"] .text-link:not(.hero .text-link) {
+  border-color: var(--borde);
+  background: color-mix(in srgb, var(--primario) 12%, var(--fondo));
+  color: #ff7d73;
+}
+html[data-theme="oscuro"] .text-link:not(.hero .text-link):hover {
+  border-color: var(--primario);
+  background: color-mix(in srgb, var(--primario) 20%, var(--fondo));
+}
 html[data-theme="oscuro"] .site-header {
   border-top: 4px solid transparent;
   border-image: linear-gradient(90deg, #edf000 0 70%, #ed3d32 70% 100%) 1;
